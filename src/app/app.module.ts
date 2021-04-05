@@ -3,13 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {SongDetailsComponent} from './song-details/song-details.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        SongDetailsComponent
-    ],
+  declarations: [
+    AppComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule
