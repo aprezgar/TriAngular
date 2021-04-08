@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Cancion } from './cancion';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MusicWeb';
-  myCancion = 'What About Us';
+  cancionSelecc: Cancion | null = null;
+
+  selecc(seleccionada:Cancion){
+    this.cancionSelecc = seleccionada;
+  }
 }
+
+
+
+

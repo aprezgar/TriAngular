@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 //import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CancionesComponent } from './canciones/canciones.component';
+import { ListaCancionesComponent } from './lista-canciones/lista-canciones.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 
 
@@ -11,6 +13,8 @@ import { CancionesComponent } from './canciones/canciones.component';
   declarations: [
     AppComponent,
     CancionesComponent,
+    ListaCancionesComponent,
+    FilterPipe,
 
 
   ],

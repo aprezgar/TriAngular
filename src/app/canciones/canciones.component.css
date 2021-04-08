@@ -1,0 +1,11 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#artist{
+    margin-top: 10px;
+}
+
+#artist,#album,#record-company,#year,#genre{
+    font-size: 12px; 
+}
