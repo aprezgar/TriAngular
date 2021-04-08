@@ -1,0 +1,13 @@
+<h2>{{cancion.songName | uppercase}} Details</h2>
+<!--div><span>id: </span>{{cancion.id}}</div-->
+<div>
+  <label for="songName">Song Name: </label>
+  <input id="songName" [(ngModel)]="cancion.songName" placeholder="name">
+</div>
+
+<div><span>Artist: </span>{{cancion.artist}}</div>
+<div><span>Album: </span>{{cancion.album}}</div>
+<div><span>Record Company: </span>{{cancion.recordCompany}}</div>
+<div><span>Year: </span>{{cancion.year}}</div>
+<div><span>Genre: </span>{{cancion.genre}}</div>
+<img src="assets/cancion/{{cancion.file}}" width="200px" alt="" *ngIf="cancion.file.length">
