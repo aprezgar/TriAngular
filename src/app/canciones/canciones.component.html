@@ -1,7 +1,11 @@
 <body>
- <div class="container-fluid"> 
+ <div class="container-fluid">
   <h1 class="text-center">{{cancion!.title}}</h1>
   <h3 class="text-center">{{cancion!.artist}}</h3>
     <div class="text-center"><img id="photo-album" src="assets/cancion/{{cancion!.file}}" alt="photo_album" height="400px" width="400px" alt="" *ngIf="cancion!.file.length"></div>
-  </div> 
+    <h5 class="text-center">{{cancion!.album}}</h5>
+    <h5 class="text-center">{{cancion!.recordCompany}}</h5>
+    <h5 class="text-center">{{cancion!.genre}}</h5>
+    <h5 class="text-center">{{cancion!.year}}</h5>
+  </div>
 </body>
