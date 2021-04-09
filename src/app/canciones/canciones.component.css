@@ -2,10 +2,12 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-#artist{
-    margin-top: 10px;
+#album{
+    margin-top: 20px;
 }
 
 #artist,#album,#record-company,#year,#genre{
     font-size: 12px;
 }
+
+

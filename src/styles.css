@@ -24,7 +24,6 @@ head, body{
 }
 
 button, input{
-  margin-left:220px;
   border-radius: 30px;
   border-width: 1px;
   line-height:0.5;
@@ -41,8 +40,8 @@ button, ::placeholder{
   font-size:20px;
 }
 
-img.account_icon{
-  margin-left:750px; 
+.text-right{
+  margin-right: 50px; 
 }
 
 

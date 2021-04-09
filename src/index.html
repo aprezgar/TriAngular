@@ -14,10 +14,18 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg text-white bg-info">
-    <img class="logo" src="assets/icons/musicweb.jpeg" width="40" height="40" class="d-inline-block align-top" alt="">
-    <a class="nabvar-brand text-white ml-1" href="#">MusicWeb</a>
-    <input type="text" name="filtrado" value="" placeholder="Search song title..." [(ngModel)]="textoFiltrado">
-    <img class="account_icon" src="assets/icons/account.png" width="25" height="30" alt="account">
+    <div class="col-3">
+      <img class="logo" src="assets/icons/musicweb.jpeg" width="40" height="40" class="d-inline-block align-top" alt="">
+      <a class="nabvar-brand text-white ml-1" href="#">MusicWeb</a>
+    </div>
+    <div class="col-3">
+      <input type="text" name="filtrado" value="" placeholder="Search song title..." [(ngModel)]="textoFiltrado">
+    </div>
+    <div class="col-6">
+      <div class="text-right">
+        <img class="account_icon" src="assets/icons/account.png" width="25" height="30" alt="account">
+      </div>
+    </div>
   </nav>
   <div class="container-fluid">
     <app-root></app-root>

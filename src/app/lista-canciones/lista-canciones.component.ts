@@ -12,7 +12,6 @@ export class ListaCancionesComponent implements OnInit {
   canciones = CANCIONES; 
   textoFiltrado = "";  
   @Output() cancionSeleccionada = new EventEmitter<Cancion>();
-  @Input() cancion: Cancion | null = null; 
 
   constructor() { }
 
