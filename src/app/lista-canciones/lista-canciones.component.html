@@ -1,8 +1,8 @@
 <ul class="text-left">
     <li *ngFor="let cancion of canciones | filter: textoFiltrado" (click)="selecc(cancion)">
-    <div><img src="../../assets/cancion/{{cancion.file}}" id="pic" class="rounded float-left" alt="" width="40px" height="40px"></div>
-    <span id="title" role="button">{{cancion.title}}</span><br>
-    <span id="artist" role="button">{{cancion.artist}}</span> 
+    <div><img src="../../assets/cancion/{{cancion.file}}" id="pic" class="rounded float-left" alt="" width="50px" height="50px"></div>
+    <div style="margin-left:70px" id="title" role="button">{{cancion.title}}</div>
+    <div style="margin-left:70px" id="artist" role="button">{{cancion.artist}}</div> 
     </li>
 </ul>
 

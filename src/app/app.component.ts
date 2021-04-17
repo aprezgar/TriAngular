@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Cancion } from './cancion';
+import { Cancion } from './cancion/cancion';
 
 @Component({
   selector: 'app-root',

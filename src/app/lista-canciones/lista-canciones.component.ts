@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
-import { Cancion } from '../cancion';
-import { CANCIONES } from './canciones';
+import { Cancion } from '../cancion/cancion';
+import { CANCIONES } from '../cancion/canciones';
 
 @Component({
   selector: 'app-lista-canciones',
