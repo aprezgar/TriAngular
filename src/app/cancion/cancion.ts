@@ -9,6 +9,7 @@ export interface Cancion {
   genre: string;
   file: string;
   description: string;
+  mp3: string;
 
 
 }
