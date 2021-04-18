@@ -7,11 +7,12 @@ export const CANCIONES: Cancion[] = [
         artist: 'Pink',
         year: 2017,
         album: 'Beautiful Trauma',
-        duration: '04:30',
+        duration: '04:29',
         recordCompany: 'RCA Records',
         genre: 'POP',
         file: '../../assets/cancion/Beautiful_trauma_Pink.jpg',
-        description: '',
+        description: '"What About Us" is an upbeat EDM song, with a length of four minutes and twenty-nine seconds. Pink described the song as a political protest song that provides social commentary on her belief the US government had failed people.',
+        mp3: '../../assets/cancionmp3/Pink  What About Us.mp3',
     },
 
     {
@@ -20,12 +21,13 @@ export const CANCIONES: Cancion[] = [
         artist: 'Spice girls',
         year: 1996,
         album: 'Spice',
-        duration: '02:29',
+        duration: '02:53',
         recordCompany: 'EMI Music',
         genre: 'POP',
         file: '../../assets/cancion/wannabe.jpg',
         description: '"Wannabe" is an uptempo dance-pop song which features Mel B and Geri Halliwell rapping. The lyrics, which address the value of female friendship over the heterosexual bond, became an iconic symbol of female empowerment and the most emblematic song of the groups Girl Power',
-    },
+        mp3: '../../assets/cancionmp3/Wannabe (128 kbps).mp3',
+      },
 
     {
         id: 3,
@@ -33,12 +35,13 @@ export const CANCIONES: Cancion[] = [
         artist: 'Backstreet Boys',
         year: 1997,
         album: "Backstreet's Back",
-        duration: '04:30',
+        duration: '03:41',
         recordCompany: 'Jive Records',
         genre: 'POP',
         file: '../../assets/cancion/aslongasyouloveme.jpg',
-        description: '',
-    },
+        description: '"As Long as You Love Me" is a song by American boy band Backstreet Boys. It was released as the second single from their debut album Backstreet Boys in the United States and Backstreet´s Back internationally. It was released on September 29, 1997, internationally and on October 21, 1997, in the United States. It is one of the band´s biggest hits and considered one of their signature songs.',
+        mp3: '../../assets/cancionmp3/AsLongAsYouLoveMe.mp3',
+      },
 
     {
         id: 4,
@@ -46,12 +49,13 @@ export const CANCIONES: Cancion[] = [
         artist: 'Amy Winehouse',
         year: 2006,
         album: "Back to Black",
-        duration: '02:35',
+        duration: '04:08',
         recordCompany: 'Island Records',
         genre: 'Soul',
         file: '../../assets/cancion/BackToBlack.jpg',
         description: 'This song is about Winehouse´s breakup with her then-boyfriend Blake Fielder-Civil. They got back together and married in 2007.',
-    },
+        mp3: '../../assets/cancionmp3/BackToBlack.mp3',
+      },
 
     {
         id: 5,
@@ -64,7 +68,8 @@ export const CANCIONES: Cancion[] = [
         genre: 'POP',
         file: '../../assets/cancion/TheTruhtAboutLove.jpg',
         description: '"Just Give Me a Reason" is a pop ballad about the desire to hold on to a relationship even when it appears to be breaking down',
-    },
+        mp3: '../../assets/cancionmp3/JustGiveMeAReason.mp3',
+      },
 
     {
         id: 6,
@@ -72,11 +77,12 @@ export const CANCIONES: Cancion[] = [
         artist: 'Amy Winehouse',
         year: 2006,
         album: "Back to Black",
-        duration: '04:04',
+        duration: '02:29',
         recordCompany: 'Island Records',
         genre: 'Soul',
         file: '../../assets/cancion/BackToBlack.jpg',
         description: '"Love Is a Losing Game" is a song by English singer and songwriter Amy Winehouse from her second and final studio album Back to Black (2006). It was chosen as the fifth and final single from Back to Black and was also the final single released in Winehouse´s lifetime',
+        mp3: '../../assets/cancionmp3/LoveIsALosingGame.mp3',
     },
 
 ];
