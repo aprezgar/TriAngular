@@ -1,0 +1,16 @@
+<h3>Detalle filtro</h3>
+
+<ul *ngIf="filtro!.tipo =='Genre'" class="text-left">
+    <li style="list-style: none!important; margin:5px" *ngFor="let genre of genres" (click)="seleccionGenre(genre)">
+    <span>{{genre.nombre}}</span> 
+    </li>
+</ul>
+
+<ul *ngIf="filtro!.tipo =='Artist'"class="text-left">
+    <li style="list-style: none!important; margin:5px" *ngFor="let artist of artists" (click)="seleccionArtist(artist)">
+    <span>{{artist.nombre}}</span> 
+    </li>
+</ul>
+
+
+
