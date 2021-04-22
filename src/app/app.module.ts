@@ -8,8 +8,6 @@ import { ListaCancionesComponent } from './lista-canciones/lista-canciones.compo
 import { FilterPipe } from './pipes/filter.pipe';
 import { FiltrosComponent } from './filtros/filtros.component';
 import { DetalleFiltroComponent } from './detalle-filtro/detalle-filtro.component';
-import { DetalleGenreComponent } from './detalle-genre/detalle-genre.component';
-import { DetalleArtistComponent } from './detalle-artist/detalle-artist.component';
 
 
 
@@ -21,8 +19,6 @@ import { DetalleArtistComponent } from './detalle-artist/detalle-artist.componen
     FilterPipe,
     FiltrosComponent,
     DetalleFiltroComponent,
-    DetalleGenreComponent,
-    DetalleArtistComponent,
 
   ],
   imports: [

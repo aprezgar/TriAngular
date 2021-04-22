@@ -1,10 +1,19 @@
 h3{
     font-size: 24px;
     color:white
-};
+}
 
 span:hover {
     box-shadow: 0 10px 25px 0 rgb(12 15 28 / 12%);
     border-radius: 2em;
     padding: 5px;
 }
+
+span.active{
+    box-shadow: 0 10px 25px 0 rgb(12 15 28 / 12%);
+    border-radius: 2em;
+    padding: 5px;
+}
+
+
+

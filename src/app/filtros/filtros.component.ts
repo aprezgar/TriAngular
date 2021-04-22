@@ -12,6 +12,7 @@ export class FiltrosComponent implements OnInit {
 
   filtros = FILTROS;
   @Output() filtroSeleccionado = new EventEmitter<Filtro>();
+  
 
   constructor() { }
 
@@ -20,8 +21,10 @@ export class FiltrosComponent implements OnInit {
 
   seleccionFiltro(seleccionado:Filtro){
     this.filtroSeleccionado.emit(seleccionado);
+    console.log(seleccionado, "seleccionado")
   }
 
+ 
 
 
 }

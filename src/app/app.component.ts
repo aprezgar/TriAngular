@@ -20,6 +20,7 @@ export class AppComponent {
   filtroSelecc: Filtro | null = null;
   artistSelecc: Artist | null = null;
   genreSelecc: Genre | null = null;
+  noSelecc: string = "";
 
   selecc(seleccionada:Cancion){
     this.cancionSelecc = seleccionada;
@@ -36,6 +37,8 @@ export class AppComponent {
   seleccionGenre(seleccionado:Genre){
     this.genreSelecc = seleccionado;
   }
+
+
 }
 
 
