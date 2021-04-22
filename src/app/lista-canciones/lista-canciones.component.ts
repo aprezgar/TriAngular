@@ -9,8 +9,9 @@ import { CANCIONES } from './canciones';
 })
 export class ListaCancionesComponent implements OnInit {
 
-  canciones = CANCIONES; 
-  textoFiltrado = "";  
+  canciones = CANCIONES;
+  textoFiltrado = "";
+
   @Output() cancionSeleccionada = new EventEmitter<Cancion>();
 
   constructor() { }

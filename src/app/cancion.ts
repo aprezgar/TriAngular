@@ -7,7 +7,8 @@ export interface Cancion {
   recordCompany: string;
   genre: string;
   file: string;
-
+  musicUrl: string;
+  duration: string;
 
 }
 
