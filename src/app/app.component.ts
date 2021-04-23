@@ -20,22 +20,24 @@ export class AppComponent {
   filtroSelecc: Filtro | null = null;
   artistSelecc: Artist | null = null;
   genreSelecc: Genre | null = null;
-  noSelecc: string = "";
+  noSelecc: Filtro | null = null;
 
   selecc(seleccionada:Cancion){
     this.cancionSelecc = seleccionada;
   }
 
-  seleccionFiltro(seleccionado:Filtro){
-    this.filtroSelecc = seleccionado;
+  seleccionFiltro(seleccion:Filtro){
+    this.filtroSelecc = seleccion;
+    this.seleccionArtist(null);
+    this.seleccionGenre(null);
   }
 
-  seleccionArtist(seleccionado:Artist){
-    this.artistSelecc = seleccionado;
+  seleccionArtist(seleccion:Artist | null){
+    this.artistSelecc = seleccion;
   }
 
-  seleccionGenre(seleccionado:Genre){
-    this.genreSelecc = seleccionado;
+  seleccionGenre(seleccion:Genre | null){
+    this.genreSelecc = seleccion;
   }
 
 

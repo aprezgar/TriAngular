@@ -6,8 +6,7 @@ import { Artist } from './artist';
 export const FILTROS: Filtro[] = [
     { id: 1, tipo: 'Genre'},
     { id: 2, tipo: 'Artist'},
-    { id: 3, tipo: 'No filters'}
-
+    { id: 3, tipo: 'No Filters'}
 ];
 
 export const GENRES: Genre[] = [
@@ -23,3 +22,4 @@ export const ARTISTS: Artist[] = [
     {id: 4, nombre: 'Pink'}
 
 ];
+

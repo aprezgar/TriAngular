@@ -11,6 +11,7 @@ import { FILTROS } from '../filtros-canciones/filtros';
 export class FiltrosComponent implements OnInit {
 
   filtros = FILTROS;
+  string = "No filters"
   @Output() filtroSeleccionado = new EventEmitter<Filtro>();
   
 
