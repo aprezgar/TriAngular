@@ -7,6 +7,8 @@ import { CancionesComponent } from './canciones/canciones.component';
 import { ListaCancionesComponent } from './lista-canciones/lista-canciones.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { ReproductorComponent } from './reproductor/reproductor.component';
+import { MaterialModule } from './material.module';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { ReproductorComponent } from './reproductor/reproductor.component';
     BrowserModule,
     // AppRoutingModule
     FormsModule,
+    MaterialModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
