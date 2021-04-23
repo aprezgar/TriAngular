@@ -7,7 +7,6 @@ import { CancionesComponent } from './canciones/canciones.component';
 import { ListaCancionesComponent } from './lista-canciones/lista-canciones.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { ReproductorComponent } from './reproductor/reproductor.component';
-import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -24,7 +23,6 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     // AppRoutingModule
     FormsModule,
-    MaterialModule,
     AppRoutingModule,
   ],
   providers: [],
