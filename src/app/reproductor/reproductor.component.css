@@ -1,0 +1,47 @@
+.footer {
+  background-color: lightgray;
+  padding-bottom: 10px;
+}
+
+.ico {
+  width: 20px;
+  height: 20px;
+}
+
+
+div#timeline1 {
+  width: 100%;
+  background: red;
+  display: block;
+}
+
+div#seekObj1 {
+  width: 20px;
+  height: 20px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.media-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.time-slider {
+  width: 100% !important;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.media-action-bar {
+  width: 100%;
+  padding: 2.5rem;
+  justify-content: center;
+}
+
+.mat-icon {
+  height: 48px !important;
+  width: 48px !important;
+  font-size: 48px !important;
+}
