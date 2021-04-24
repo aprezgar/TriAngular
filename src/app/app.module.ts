@@ -8,7 +8,7 @@ import { ListaCancionesComponent } from './lista-canciones/lista-canciones.compo
 import { FilterPipe } from './pipes/filter.pipe';
 import { FiltrosComponent } from './filtros/filtros.component';
 import { DetalleFiltroComponent } from './detalle-filtro/detalle-filtro.component';
-
+import { ReproductorComponent } from './reproductor/reproductor.component';
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import { DetalleFiltroComponent } from './detalle-filtro/detalle-filtro.componen
     FilterPipe,
     FiltrosComponent,
     DetalleFiltroComponent,
-
+    ReproductorComponent
   ],
   imports: [
     BrowserModule,
