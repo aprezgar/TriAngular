@@ -12,7 +12,7 @@ export const CANCIONES: Cancion[] = [
         genre: 'Pop',
         file: '../../assets/cancion/Beautiful_trauma_Pink.jpg',
         description: '"What About Us" is an upbeat EDM song, with a length of four minutes and twenty-nine seconds. Pink described the song as a political protest song that provides social commentary on her belief the US government had failed people.',
-        mp3: '../../assets/cancionmp3/Pink  What About Us.mp3',
+        mp3: '../../assets/cancionmp3/PinkWhatAboutUs.mp3',
     },
 
     {
@@ -26,7 +26,7 @@ export const CANCIONES: Cancion[] = [
         genre: 'Pop',
         file: '../../assets/cancion/wannabe.jpg',
         description: '"Wannabe" is an uptempo dance-pop song which features Mel B and Geri Halliwell rapping. The lyrics, which address the value of female friendship over the heterosexual bond, became an iconic symbol of female empowerment and the most emblematic song of the groups Girl Power',
-        mp3: '../../assets/cancionmp3/Wannabe (128 kbps).mp3',
+        mp3: '../../assets/cancionmp3/Wannabe.mp3',
       },
 
     {
