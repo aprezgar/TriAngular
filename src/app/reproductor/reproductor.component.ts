@@ -23,9 +23,14 @@ export class ReproductorComponent{
   ngOnChanges() {
     if (this.cancion) {
       console.log("ngOnChanges this.cancion", this.cancion)
-      this.audio = new Audio();
-      console.log("this.cancion!.mp3", this.cancion!.mp3)
-      this.audio.src = this.cancion!.mp3;
+      if (this.audio != undefined){
+        this.onStop();
+        this.audio.src = this.cancion!.mp3;
+      } else{
+        this.audio = new Audio();
+        this.audio.src = this.cancion!.mp3;
+        console.log("this.cancion!.mp3", this.cancion!.mp3)
+      }
     }
   }
 
@@ -38,5 +43,12 @@ export class ReproductorComponent{
   onPause() {
     this.audio.pause();
     this.stop = true;
+  }
+
+  onStop() {
+    if (this.cancion) {
+      this.audio.src = this.cancion!.mp3;
+      this.stop = true;
+    }
   }
 }

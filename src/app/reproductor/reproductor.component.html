@@ -6,16 +6,17 @@
         <span id="title" class="footer-title d-block text-truncate mb-0"><strong>{{cancion!.title}}</strong></span>
         <span id="artist" class="footer-artist d-block text-muted text-truncate mb-0"><small>{{cancion!.artist}}</small></span>
       </div>
-      <div class="col-md-1">
+      <div class="col-md-2">
         <!-- mat-button [disabled]="isFirstPlaying()" (click)="previous()" -->
-        <img role="button" src="assets/icons/rewind.ico" class="ico" widht="40px">
+        <!--<img role="button" src="assets/icons/rewind.ico" class="ico" widht="40px">-->
         <!--mat-button (click)="play()" [disabled]="state?.error" *ngIf="!state?.playing" -->
         <img role="button" *ngIf="stop"src="assets/icons/play.ico" width="50px" height="50px" (click)="onPlay()">
         <img role="button" *ngIf="!stop" src="assets/icons/pause.png" width="50px" height="50px" (click)="onPause()">
+        <img role="button" src="assets/icons/stop.png" width="50px" height="50px" (click)="onStop()">
         <!-- mat-button [disabled]="isLastPlaying()" (click)="next()" -->
-        <img role="button" src="assets/icons/forward.ico" class="ico">
+        <!--<img role="button" src="assets/icons/forward.ico" class="ico">--> 
       </div>
-      <div class="col-md-8">
+      <div class="col-md-7">
         <div class="progress mt-2">
           <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
             </div>
