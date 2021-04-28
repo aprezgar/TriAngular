@@ -16,16 +16,16 @@
         <!-- mat-button [disabled]="isLastPlaying()" (click)="next()" -->
         <!--<img role="button" src="assets/icons/forward.ico" class="ico">-->
       </div>
-
-      <div class="reproducer__track">
-        <div class="reproducer__track__timePlayed">
-          <input (focus)="onPause()" type="text" placeholder="{{valuePlayedTime}}" name="timePlayed" [(ngModel)]="valuePlayedTime" value="{{toHumanTime(audio.currentTime)}}" (keyup)="changeCurrentTime()">
+      <div class="col-md-7">
+        <div class="reproductor">
+          <div class="timePlayed">
+            <input (focus)="onPause()" type="text" placeholder="{{valuePlayedTime}}" name="timePlayed" [(ngModel)]="valuePlayedTime" value="{{toHumanTime(audio.currentTime)}}" (keyup)="changeCurrentTime()">
+          </div>
+          <!-- -->
+          <app-play-song class= "trackLenght" (refreshTimePlayed)="refreshTimePlayed($event)" [valuePlayedTime]="toPercent(toHumanTime(audio.currentTime))" [cancion]="cancion" [audio]="audio"></app-play-song>
+          <div class="cancionDuration">{{cancion!.duration}}</div>
         </div>
-        <!-- -->
-        <app-play-song class= "trackLenght" (refreshTimePlayed)="refreshTimePlayed($event)" [valuePlayedTime]="toPercent(toHumanTime(audio.currentTime))" [cancion]="cancion" [audio]="audio"></app-play-song>
-        <div class="reproducer__track__timeDuration">{{cancion!.duration}}</div>
       </div>
-
       <!--div class="col-md-7">
         <div class="progress mt-2">
           <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">

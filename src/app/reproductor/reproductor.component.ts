@@ -35,7 +35,6 @@ export class ReproductorComponent implements OnInit{
       if (this.audio != undefined){
         this.onStop();
         this.audio.src = this.cancion!.mp3;
-        this.onPlay();
       } else{
         this.audio = new Audio();
         this.audio.src = this.cancion!.mp3;
