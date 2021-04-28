@@ -14,9 +14,19 @@
         <img role="button" *ngIf="!stop" src="assets/icons/pause.png" width="50px" height="50px" (click)="onPause()">
         <img role="button" src="assets/icons/stop.png" width="50px" height="50px" (click)="onStop()">
         <!-- mat-button [disabled]="isLastPlaying()" (click)="next()" -->
-        <!--<img role="button" src="assets/icons/forward.ico" class="ico">--> 
+        <!--<img role="button" src="assets/icons/forward.ico" class="ico">-->
       </div>
-      <div class="col-md-7">
+
+      <div class="reproducer__track">
+        <div class="reproducer__track__timePlayed">
+          <input (focus)="onPause()" type="text" placeholder="{{valuePlayedTime}}" name="timePlayed" [(ngModel)]="valuePlayedTime" value="{{toHumanTime(audio.currentTime)}}" (keyup)="changeCurrentTime()">
+        </div>
+        <!-- -->
+        <app-play-song class= "trackLenght" (refreshTimePlayed)="refreshTimePlayed($event)" [valuePlayedTime]="toPercent(toHumanTime(audio.currentTime))" [cancion]="cancion" [audio]="audio"></app-play-song>
+        <div class="reproducer__track__timeDuration">{{cancion!.duration}}</div>
+      </div>
+
+      <!--div class="col-md-7">
         <div class="progress mt-2">
           <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
             </div>
@@ -25,10 +35,10 @@
           <div>00:00</div>
           <div>02:13</div>
         </div>
-      </div>
+      </div-->
     </div>
   </div>
 </div>
-    
+
 
 

@@ -8,11 +8,27 @@ import { Cancion } from '../cancion/cancion';
 })
 export class PlaySongComponent implements OnInit {
 
+  @Input() cancion:Cancion | null = null;
+  @Input() valuePlayedTime:number | null = null;
+  @Input() audio!: HTMLAudioElement;
 
+  //usamos función del padre
+  @Output() refreshTimePlayed: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor() { }
+  resetTrack = true;
 
-  ngOnInit(): void {
+  constructor() {
+  }
+
+  ngOnInit() {
+    console.log(`value: ${this.valuePlayedTime}`)
+  }
+
+  percentToSeconds(event: any){
+    let percentPlayed = event.value,
+        duration = this.audio.duration,
+        totalSeconds =  (percentPlayed * duration) / 100;
+    this.refreshTimePlayed.emit(totalSeconds);
   }
 
 }

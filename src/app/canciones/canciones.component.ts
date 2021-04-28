@@ -8,7 +8,7 @@ import {Cancion} from '../cancion/cancion';
 })
 export class CancionesComponent implements OnInit {
 
-  @Input() cancion: Cancion | null = null; 
+  @Input() cancion: Cancion | null = null;
 
   constructor() { }
 
