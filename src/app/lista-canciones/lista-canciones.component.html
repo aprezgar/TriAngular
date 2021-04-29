@@ -1,10 +1,10 @@
-<ul class="text-left">
-    <li *ngFor="let cancion of canciones | filter: textoBusqueda: filtroArtista: filtroGenre: filtroNo" (click)="selecc(cancion)">
-        <div><img src="../../assets/cancion/{{cancion.file}}" id="pic" class="rounded float-left" alt="" width="50px" height="50px"></div>
-        <div style="margin-left:70px" id="title" role="button">{{cancion.title}}</div>
-        <div style="margin-left:70px" id="artist" role="button">{{cancion.artist}}</div> 
-    </li>
-</ul>
+<mat-nav-list class="text-left">
+    <mat-list-item *ngFor="let cancion of canciones | filter: textoBusqueda: filtroArtista: filtroGenre: filtroNo" (click)="selecc(cancion)">
+        <img matLine src="../../assets/cancion/{{cancion.file}}" id="pic" class="rounded float-left" alt="" width="50px" height="50px">
+        <div matLine style="margin-left:70px" id="title" role="button">{{cancion.title}}</div>
+        <div matLine style="margin-left:70px" id="artist" role="button">{{cancion.artist}}</div> 
+    </mat-list-item>
+</mat-nav-list>
 
 
 

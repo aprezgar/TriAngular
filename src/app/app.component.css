@@ -27,10 +27,11 @@ head, body{
     margin-bottom: 25px;
 }
 
-button, input{
+input{
+    background-color: white;
     border-radius: 30px;
     border-width: 1px;
-    line-height:0.5;
+    line-height:1.5;
     font-size:20px; 
     padding-left:40px;
     background-image:url(../assets/icons/lupa.png);
@@ -40,11 +41,62 @@ button, input{
     background-position-y: 4.5px;
 }
 
-button, ::placeholder{
+::ng-deep mat.input.element{
     font-size:20px;
+    color:white!important;
 }
 
 .text-right{
     margin-right: 50pxd; 
 }
-  
+
+
+::ng-deep .mat-form-field-wrapper.ng-tns-c59-0{
+}
+
+::ng-deep .ng-tns-c59-0.ng-star-inserted{
+    font-family: Montserrat;
+    color: #39ff14!important;
+}
+
+::ng-deep .mat-input-element.mat-form-field-autofill-control.ng-tns-c59-0.ng-pristine.ng-valid.cdk-text-field-autofill-monitored.ng-touched{
+    font-family: Montserrat;
+    caret-color:white!important;
+}
+
+::ng-deep .mat-form-field{
+    font-family: Montserrat!important;
+}
+::ng-deep .ng-tns-c59-0.ng-star-inserted{
+    background-color: transparent;
+    border: none;
+
+}
+
+::ng-deep .mat-icon.notranslate.material-icons.mat-icon-no-color{
+    font-size:15px!important;
+    font-weight: bolder;
+    vertical-align: top;
+
+}
+
+::ng-deep .mat-form-field-underline.ng-tns-c59-0.ng-star-inserted{
+    visibility: hidden;
+
+}
+
+::ng-deep .mat-form-field-ripple.ng-tns-c59-0{
+    visibility: hidden;
+}
+
+::ng-deep .mat-input-element{
+    caret-color: black!important;
+}
+
+::ng-deep .mat-form-field{
+    color: black!important;
+}
+
+nav{
+    height:30%;
+}
