@@ -10,4 +10,6 @@ body{
     font-size: 12px;
 }
 
-
+table {
+  width: 70%;
+}
