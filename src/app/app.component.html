@@ -6,7 +6,7 @@
     <a class="nabvar-brand text-white ml-1" href="#">MusicWeb</a>
   </div>
   <mat-form-field class="col-3">
-    <input matInput type="text" name="filtrado" value=""  [(ngModel)]="textoFiltrado" >
+    <input matInput type="text" name="filtrado" value=""  [(ngModel)]="textoFiltrado" (click)="checkPlaceHolder()" (blur)="checkPlaceHolder()" matInput placeholder=" {{myplaceHolder}} ">
     <button mat-button *ngIf="textoFiltrado" matSuffix mat-icon-button aria-label="Clear" (click)="textoFiltrado=''">
       <mat-icon>close</mat-icon>
     </button>

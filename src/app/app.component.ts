@@ -15,7 +15,7 @@ import { Genre } from './filtros-canciones/genre';
 export class AppComponent {
   title: string = "MusicWeb";
   textoFiltrado: string = "";
-  canciones = CANCIONES; 
+  canciones = CANCIONES;
   cancionSelecc: Cancion | null = null;
   filtroSelecc: Filtro | null = null;
   artistSelecc: Artist | null = null;
@@ -39,7 +39,18 @@ export class AppComponent {
   seleccionGenre(seleccion:Genre | null){
     this.genreSelecc = seleccion;
   }
+  myplaceHolder: string ='Search for song'
 
+  checkPlaceHolder() {
+     if (this.myplaceHolder) {
+       this.myplaceHolder = 'Search for song'
+       return;
+     } else {
+       this.myplaceHolder = 'Search for song'
+       return
+
+     }
+   }
 
 }
 

@@ -6,16 +6,16 @@ h3{
 head, body{
     font-family: 'Montserrat', sans-serif;
 }
-  
+
 .text-white{
     font-size: x-large;
     color: #39ff14!important;
 }
 
 .bg-info{
-    margin-bottom: 25px ; 
+    margin-bottom: 25px ;
     background-color: black!important;
-    padding-bottom: 25px; 
+    padding-bottom: 25px;
     padding-top: 25px;
 }
 
@@ -32,11 +32,11 @@ input{
     border-radius: 30px;
     border-width: 1px;
     line-height:1.5;
-    font-size:20px; 
+    font-size:20px;
     padding-left:40px;
     background-image:url(../assets/icons/lupa.png);
     background-size:18px;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-position-x: 5%;
     background-position-y: 4.5px;
 }
@@ -47,17 +47,17 @@ input{
 }
 
 .text-right{
-    margin-right: 50pxd; 
+    margin-right: 50pxd;
 }
 
 
-::ng-deep .mat-form-field-wrapper.ng-tns-c59-0{
-}
 
 ::ng-deep .ng-tns-c59-0.ng-star-inserted{
-    font-family: Montserrat;
-    color: #39ff14!important;
+  font-family: Montserrat;
+  color: #39ff14!important
+  ;
 }
+
 
 ::ng-deep .mat-input-element.mat-form-field-autofill-control.ng-tns-c59-0.ng-pristine.ng-valid.cdk-text-field-autofill-monitored.ng-touched{
     font-family: Montserrat;
@@ -98,5 +98,29 @@ input{
 }
 
 nav{
-    height:30%;
+    height:20%;
 }
+
+
+
+::ng-deep .mat-form-field-placeholder{
+
+  color:red;
+}
+
+::ng-deep .mat-focused .mat-form-field-placeholder{
+
+  color:red;
+}
+::placeholder {
+  color: red;
+}
+
+::ng-deep .matinput-placeholder { /* Microsoft Edge */
+  color: red;
+}
+
+.md-form input::placeholder {
+  color: red;
+}
+
