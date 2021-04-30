@@ -1,5 +1,5 @@
-<h3>Detalle filtro</h3>
-
+<br>
+<br>
 <ul *ngIf="filtro!.tipo =='Genre'" class="text-left">
     <li style="list-style: none!important; margin:5px" *ngFor="let genre of genres" (click)="seleccionGenre(genre)">
     <span class="inactive" id="genre{{genre.id}}" role="button">{{genre.nombre}}</span> 
@@ -14,7 +14,7 @@
 
 <!----/
 
-<ul *ngIf="filtro!.tipo =='No filters'"class="text-left">
+<ul *ngIf="filtro!.tipo =='NoFilters'"class="text-left">
     <li style="list-style: none!important; margin:5px" (click)="seleccionNo(noSeleccionado)"">
     </li>
 </ul>
