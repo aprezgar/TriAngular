@@ -41,15 +41,9 @@ input{
     background-position-y: 4.5px;
 }
 
-::ng-deep mat.input.element{
-    font-size:20px;
-    color:white!important;
-}
-
 .text-right{
     margin-right: 50pxd;
 }
-
 
 
 ::ng-deep .ng-tns-c59-0.ng-star-inserted{
@@ -70,19 +64,16 @@ input{
 ::ng-deep .ng-tns-c59-0.ng-star-inserted{
     background-color: transparent;
     border: none;
-
 }
 
 ::ng-deep .mat-icon.notranslate.material-icons.mat-icon-no-color{
     font-size:15px!important;
     font-weight: bolder;
     vertical-align: top;
-
 }
 
 ::ng-deep .mat-form-field-underline.ng-tns-c59-0.ng-star-inserted{
     visibility: hidden;
-
 }
 
 ::ng-deep .mat-form-field-ripple.ng-tns-c59-0{
@@ -98,29 +89,15 @@ input{
 }
 
 nav{
-    height:20%;
+    height:15%;
 }
 
-
-
-::ng-deep .mat-form-field-placeholder{
-
-  color:red;
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix{
+    color:black;
 }
 
-::ng-deep .mat-focused .mat-form-field-placeholder{
-
-  color:red;
+::ng-deep #mat-form-field-label-1{
+    font-size:15px;
+    padding-left:40px;
+    padding-top:15px;
 }
-::placeholder {
-  color: red;
-}
-
-::ng-deep .matinput-placeholder { /* Microsoft Edge */
-  color: red;
-}
-
-.md-form input::placeholder {
-  color: red;
-}
-

@@ -1,42 +1,39 @@
 
 <body>
-<nav class="navbar navbar-expand-lg text-white bg-info">
-  <div class="col-3">
-    <img class="logo" src="assets/icons/musicweb.jpeg" width="40" height="40" class="d-inline-block align-top" alt="">
-    <a class="nabvar-brand text-white ml-1" href="#">MusicWeb</a>
-  </div>
-  <mat-form-field class="col-3">
-    <input matInput type="text" name="filtrado" value=""  [(ngModel)]="textoFiltrado" (click)="checkPlaceHolder()" (blur)="checkPlaceHolder()" matInput placeholder=" {{myplaceHolder}} ">
-    <button mat-button *ngIf="textoFiltrado" matSuffix mat-icon-button aria-label="Clear" (click)="textoFiltrado=''">
-      <mat-icon>close</mat-icon>
-    </button>
-  </mat-form-field>
-  <div class="col-6">
-    <div class="text-right">
+  <nav class="row navbar navbar-expand-lg text-white bg-info">
+    <div class="col-md-3">
+      <img class="logo" src="assets/icons/musicweb.jpeg" width="40" height="40" class="d-inline-block align-top" alt="">
+      <a class="nabvar-brand text-white ml-1" href="#">MusicWeb</a>
+    </div>
+    <div class="col-md">
+      <mat-form-field>
+        <input matInput type="text" name="filtrado" placeholder="Search song title..." value=""  [(ngModel)]="textoFiltrado" >
+        <button mat-button *ngIf="textoFiltrado" matSuffix mat-icon-button aria-label="Clear" (click)="textoFiltrado=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+    <div class="col-md-1 text-right">
       <img class="account_icon" src="assets/icons/account.png" width="25" height="30" alt="account">
     </div>
-  </div>
-</nav>
+  </nav>
 <div class="container-fluid">
   <div class="row">
-    <div class="col">
-    <h3 class="text-left" style="margin-left:40px">FILTERS</h3>
-    <app-filtros (filtroSeleccionado)="seleccionFiltro($event)"></app-filtros>
+    <div class="col-md-1">
+      <h3 class="text-left" style="margin-left:40px">FILTERS</h3>
+      <app-filtros (filtroSeleccionado)="seleccionFiltro($event)"></app-filtros>
+   </div>
+    <div class="col-md-2">
+      <app-detalle-filtro *ngIf="filtroSelecc" [filtro]="filtroSelecc" (artistSeleccionado)="seleccionArtist($event)" (genreSeleccionado)="seleccionGenre($event)"></app-detalle-filtro>
+    </div>
+    <div class="col-md-3">
+      <h3 class="text-left" style="margin-left:40px; margin-bottom:25px;"><img style="margin-right:20px; margin-bottom:7px;" src="../assets/icons/tracks.png" width="30" height="30">       Tracks</h3>
+      <app-lista-canciones (cancionSeleccionada)="selecc($event)" [textoBusqueda]="textoFiltrado" [filtroArtista]="artistSelecc" [filtroGenre]="genreSelecc" [filtroNo]="filtroSelecc"></app-lista-canciones>
+    </div>
+    <div class="col-md-6">
+      <app-canciones *ngIf="cancionSelecc" [cancion]="cancionSelecc"></app-canciones>
+    </div>
   </div>
-  <div class="col">
-    <app-detalle-filtro *ngIf="filtroSelecc" [filtro]="filtroSelecc" (artistSeleccionado)="seleccionArtist($event)" (genreSeleccionado)="seleccionGenre($event)"></app-detalle-filtro>
-  </div>
-  <div class="col-3">
-    <h3 class="text-left" style="margin-left:40px; margin-bottom:25px;"><img style="margin-right:20px; margin-bottom:7px;" src="../assets/icons/tracks.png" width="30" height="30">       Tracks</h3>
-    <app-lista-canciones (cancionSeleccionada)="selecc($event)" [textoBusqueda]="textoFiltrado" [filtroArtista]="artistSelecc" [filtroGenre]="genreSelecc" [filtroNo]="filtroSelecc"></app-lista-canciones>
-  </div>
-  <div class="col-6">
-    <app-canciones *ngIf="cancionSelecc" [cancion]="cancionSelecc"></app-canciones>
-  </div>
-</div>
-
 <footer class="footer fixed-bottom">
-
   <app-reproductor *ngIf="cancionSelecc" [cancion]="cancionSelecc"></app-reproductor>
-
 </footer>
