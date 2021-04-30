@@ -89,3 +89,13 @@ input{
 nav{
     height:15%;
 }
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix{
+    color:black;
+}
+
+::ng-deep #mat-form-field-label-1{
+    font-size:15px;
+    padding-left:40px;
+    padding-top:15px;
+}

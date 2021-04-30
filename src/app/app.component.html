@@ -7,7 +7,7 @@
     </div>
     <div class="col-md">
       <mat-form-field>
-        <input matInput type="text" name="filtrado" value=""  [(ngModel)]="textoFiltrado" >
+        <input matInput type="text" name="filtrado" placeholder="Search song title..." value=""  [(ngModel)]="textoFiltrado" >
         <button mat-button *ngIf="textoFiltrado" matSuffix mat-icon-button aria-label="Clear" (click)="textoFiltrado=''">
           <mat-icon>close</mat-icon>
         </button>
