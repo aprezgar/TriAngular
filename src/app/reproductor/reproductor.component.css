@@ -156,3 +156,8 @@ div#seekObj1 {
 ::ng-deep .mat-slider-track-fill {
   background-color:#00F326!important
 }
+
+::ng-deep .mat-icon.notranslate.material-icons.mat-icon-no-color{
+  font-size: 50px!important;
+  font-weight:lighter;
+}

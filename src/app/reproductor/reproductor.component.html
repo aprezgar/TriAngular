@@ -7,14 +7,12 @@
         <span id="artist" class="footer-artist d-block text-muted text-truncate mb-0"><small>{{cancion!.artist}}</small></span>
       </div>
       <div class="col-md-2">
-        <!-- mat-button [disabled]="isFirstPlaying()" (click)="previous()" -->
-        <!--<img role="button" src="assets/icons/rewind.ico" class="ico" widht="40px">-->
-        <!--mat-button (click)="play()" [disabled]="state?.error" *ngIf="!state?.playing" -->
-        <img role="button" *ngIf="stop"src="assets/icons/play.ico" width="50px" height="50px" (click)="onPlay()">
-        <img role="button" *ngIf="!stop" src="assets/icons/pause.png" width="50px" height="50px" (click)="onPause()">
-        <img role="button" src="assets/icons/stop.png" width="50px" height="50px" (click)="onStop()">
-        <!-- mat-button [disabled]="isLastPlaying()" (click)="next()" -->
-        <!--<img role="button" src="assets/icons/forward.ico" class="ico">-->
+        <mat-icon role="button" *ngIf="stop" (click)="onPlay()">play_circle_outline</mat-icon>
+         <!--<img role="button" *ngIf="stop" src="assets/icons/play.ico" width="50px" height="50px" (click)="onPlay()">-->
+         <mat-icon role="button" *ngIf="!stop" (click)="onPause()">pause_circle_outline</mat-icon>
+        <!--<img role="button" *ngIf="!stop" src="assets/icons/pause.png" width="50px" height="50px" (click)="onPause()">-->
+        <mat-icon role="button" width="50px" (click)="onStop()">stop</mat-icon>
+        <!--<img role="button" src="assets/icons/stop.png" width="50px" height="50px" (click)="onStop()">-->
       </div>
       <div class="col-md-7">
         <div class="reproductor">
