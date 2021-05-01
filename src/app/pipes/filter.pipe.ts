@@ -40,7 +40,7 @@ export class FilterPipe implements PipeTransform {
     }
 
 
-    if(argNo != null && argNo == 'No filters'){
+    if(argNo != null && argNo == 'All'){
       console.log("entré");
       resultSongsFinal = [] //vacío array
       resultSongsFinal = value
