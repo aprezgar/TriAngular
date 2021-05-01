@@ -14,10 +14,25 @@ table {
   font-family: Montserrat;
   position:relative;
   margin:0 auto;
-  width:70%;
+  width:100%;
+  font-size: 10rem;
 }
 
-
-
-
+.box img{
+  width: 100%;
+  height: auto;
+}
+@supports(object-fit: cover){
+    .box img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+}
+*[role=columnheader] {
+  font-size: 20px;
+  }
+  *[role=gridcell] {
+    font-size: 20px;
+    }
 
