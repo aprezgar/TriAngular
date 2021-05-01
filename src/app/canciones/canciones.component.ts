@@ -11,7 +11,7 @@ export class CancionesComponent implements OnInit {
   @Input() cancion: Cancion | null = null;
 
 
-  displayedColumns = ['album','year', 'genre','record'];
+  displayedColumns = ['album','year', 'genre','record','duration'];
 
   constructor() { }
 

@@ -4,6 +4,8 @@ import { CANCIONES } from '../cancion/canciones';
 import { Artist } from '../filtros-canciones/artist';
 import { Filtro } from '../filtros-canciones/filtro';
 import { Genre } from '../filtros-canciones/genre';
+import { RouterLinkActive } from '@angular/router';
+
 
 @Component({
   selector: 'app-lista-canciones',
@@ -12,13 +14,13 @@ import { Genre } from '../filtros-canciones/genre';
 })
 export class ListaCancionesComponent implements OnInit {
 
-  canciones = CANCIONES; 
+  canciones = CANCIONES;
   @Input() textoBusqueda: string = "";
-  @Input() filtroArtista: Artist | null = null; 
-  @Input() filtroGenre: Genre | null = null; 
+  @Input() filtroArtista: Artist | null = null;
+  @Input() filtroGenre: Genre | null = null;
   @Input() filtroNo: Filtro | null = null;
 
-  
+
 
   @Output() cancionSeleccionada = new EventEmitter<Cancion>();
 

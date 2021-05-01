@@ -2,10 +2,10 @@
  <div class="container-fluid" style="margin-bottom:150px">
   <h1 class="text-center">{{cancion!.title}}</h1>
   <h3 class="text-center">{{cancion!.artist}}</h3>
-    <div class="text-center">
-      <img id="photo-album" src="assets/cancion/{{cancion!.file}}" alt="photo_album" height="400px" width="400px" alt="" *ngIf="cancion!.file.length">
+    <div class="box img">
+      <img id="photo-album" src="assets/cancion/{{cancion!.file}}" alt="photo_album"  *ngIf="cancion!.file.length">
     </div>
-    <div class="table">
+    <div class="table" class= "box img">
       <table mat-table [dataSource]="[cancion]" class="mat-elevation-z8">
         <ng-container matColumnDef="album">
           <th mat-header-cell *matHeaderCellDef> Album </th>
@@ -20,9 +20,13 @@
           <td mat-cell *matCellDef="let cancion"> {{cancion!.genre}} </td>
         </ng-container>
         <ng-container matColumnDef="record">
-          <th mat-header-cell *matHeaderCellDef> Record Company </th>
+          <th mat-header-cell *matHeaderCellDef> Label </th>
           <td mat-cell *matCellDef="let cancion"> {{cancion!.recordCompany}} </td>
         </ng-container>
+          <ng-container matColumnDef="duration">
+            <th mat-header-cell *matHeaderCellDef> Lengh </th>
+            <td mat-cell *matCellDef="let cancion"> {{cancion!.duration}} </td>
+          </ng-container>
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
