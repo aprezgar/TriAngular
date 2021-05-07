@@ -9,13 +9,17 @@ import { FiltrosComponent } from './filtros/filtros.component';
 import { DetalleFiltroComponent } from './detalle-filtro/detalle-filtro.component';
 import { ReproductorComponent } from './reproductor/reproductor.component';
 import { PlaySongComponent } from './play-song/play-song.component';
-import {MatSliderModule} from '@angular/material/slider';
+import { MatSliderModule} from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatListModule} from '@angular/material/list';
-import {MatInputModule} from '@angular/material/input';
-import {MatIconModule} from '@angular/material/icon';
-import {MatTableModule} from '@angular/material/table';
-
+import { MatListModule} from '@angular/material/list';
+import { MatInputModule} from '@angular/material/input';
+import { MatIconModule} from '@angular/material/icon';
+import { MatTableModule} from '@angular/material/table';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+import { TestdbComponent } from './testdb/testdb.component';
 
 
 
@@ -28,7 +32,8 @@ import {MatTableModule} from '@angular/material/table';
     FiltrosComponent,
     DetalleFiltroComponent,
     ReproductorComponent,
-    PlaySongComponent
+    PlaySongComponent,
+    TestdbComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,10 @@ import {MatTableModule} from '@angular/material/table';
     MatListModule,
     MatInputModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAnalyticsModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

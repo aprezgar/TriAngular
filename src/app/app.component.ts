@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { Cancion } from './cancion/cancion';
-import { CANCIONES } from './cancion/canciones';
+//import { CANCIONES } from './cancion/canciones';
 import { Artist } from './filtros-canciones/artist';
 import { Filtro } from './filtros-canciones/filtro';
 import { Genre } from './filtros-canciones/genre';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
+
 
 
 @Component({
@@ -13,9 +16,16 @@ import { Genre } from './filtros-canciones/genre';
 
 })
 export class AppComponent {
+
+  canciones: Observable<any[]>;
+  constructor(firestore: AngularFirestore) {
+    this.canciones = firestore.collection('canciones').valueChanges();
+  }
+
+
   title: string = "MusicWeb";
   textoFiltrado: string = "";
-  canciones = CANCIONES;
+  //canciones = CANCIONES;
   cancionSelecc: Cancion | null = null;
   filtroSelecc: Filtro | null = null;
   artistSelecc: Artist | null = null;
@@ -53,8 +63,6 @@ export class AppComponent {
    }
 
 }
-
-
 
 
 

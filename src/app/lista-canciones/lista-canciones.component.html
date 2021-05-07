@@ -1,10 +1,15 @@
 <mat-nav-list class="text-left">
-    <mat-list-item *ngFor="let cancion of canciones | filter: textoBusqueda: filtroArtista: filtroGenre: filtroNo" (click)="selecc(cancion)">
-        <img matLine src="../../assets/cancion/{{cancion.file}}" id="pic" class="rounded float-left" alt="" width="50px" height="50px">
-        <div matLine style="margin-left:70px" id="title" role="button">{{cancion.title}}</div>
-        <div matLine style="margin-left:70px" id="artist" role="button">{{cancion.artist}}</div>
+    <mat-list-item *ngFor="let item of canciones | async | filter: textoBusqueda: filtroArtista: filtroGenre: filtroNo" (click)="selecc(item)">
+        <img matLine src="../../assets/cancion/{{item.file}}" id="pic" class="rounded float-left" alt="" width="50px" height="50px">
+        <div matLine style="margin-left:70px" id="title" role="button">{{item.title}}</div>
+        <div matLine style="margin-left:70px" id="artist" role="button">{{item.artist}}</div>
     </mat-list-item>
 </mat-nav-list>
 
 
+<!--ul>
+ <li class="text" *ngFor="let item of canciones | async">
+    {{item.title}}
 
+  </li>
+</ul-->

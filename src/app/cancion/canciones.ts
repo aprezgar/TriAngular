@@ -1,4 +1,4 @@
-import { Cancion } from './cancion';
+/*import { Cancion } from './cancion';
 
 export const CANCIONES: Cancion[] = [
     {
@@ -85,5 +85,5 @@ export const CANCIONES: Cancion[] = [
         mp3: '../../assets/cancionmp3/LoveIsALosingGame.mp3',
     },
 
-];
+];*/
 

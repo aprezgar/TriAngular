@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "musicweb-f4c65": {
+      "hosting": {
+        "MusicWeb": [
+          "musicweb-f4c65"
+        ]
+      }
+    }
+  }
+}
