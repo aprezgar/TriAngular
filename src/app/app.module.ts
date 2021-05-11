@@ -33,7 +33,8 @@ import { TestdbComponent } from './testdb/testdb.component';
     DetalleFiltroComponent,
     ReproductorComponent,
     PlaySongComponent,
-    TestdbComponent
+    TestdbComponent,
+    UploadFileComponent
   ],
   imports: [
     BrowserModule,

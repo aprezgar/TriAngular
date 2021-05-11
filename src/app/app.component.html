@@ -7,7 +7,7 @@
     </div>
     <div class="col-md">
       <mat-form-field>
-        <input matInput type="text" name="filtrado" placeholder="Search song title..." value=""  [(ngModel)]="textoFiltrado" >
+        <input class="matform" matInput type="text" name="filtrado" placeholder="Search song title..." value=""  [(ngModel)]="textoFiltrado" >
         <button mat-button *ngIf="textoFiltrado" matSuffix mat-icon-button aria-label="Clear" (click)="textoFiltrado=''">
           <mat-icon>close</mat-icon>
         </button>
@@ -26,14 +26,106 @@
     <div class="col-md-2">
       <app-detalle-filtro *ngIf="filtroSelecc" [filtro]="filtroSelecc" (artistSeleccionado)="seleccionArtist($event)" (genreSeleccionado)="seleccionGenre($event)"></app-detalle-filtro>
     </div>
-    <div class="col-md-3">
-      <h3 class="text-left" style="margin-left:40px; margin-bottom:25px;"><img style="margin-right:40px; margin-bottom:7px;" src="../assets/icons/tracks.png" width="30" height="30">       Tracks</h3>
+    <div class="col-md-4">
+      <h3 class="text-left" style="margin-left:20px; margin-bottom:25px;"><mat-icon id="allSongs" style="margin-right:30px; margin-bottom:7px;">queue_music</mat-icon>       Tracks
+        <mat-icon role="button" id="addSong" style="float: right;" *ngIf="!cancionNueva" (click)="addSong()">add_circle_outline</mat-icon>
+        <mat-icon role="button" id="noNewSongs" style="float: right;" *ngIf="cancionNueva" (click)="addSong()">remove_circle_outline</mat-icon>
+      </h3>
       <app-lista-canciones (cancionSeleccionada)="selecc($event)" [textoBusqueda]="textoFiltrado" [filtroArtista]="artistSelecc" [filtroGenre]="genreSelecc" [filtroNo]="filtroSelecc"></app-lista-canciones>
     </div>
-    <div class="col-md-6">
-      <app-canciones *ngIf="cancionSelecc" [cancion]="cancionSelecc"></app-canciones>
+    <div class="col-md-5">
+      <app-canciones *ngIf="cancionSelecc" [cancion]="cancionSelecc">
+        <mat-icon>edit</mat-icon>
+      </app-canciones>
+      <h3>Add new song</h3>
+      <div *ngIf="cancionNueva" class="container-fluid">
+        <form [formGroup]="this.form">
+         <label>Title: </label> 
+          <input
+            placeholder="Title"
+            formControlName="newTitle"
+            type="text"
+            class="input-field"
+            />
+            <br>
+         <label>Artist: </label> 
+          <input
+            placeholder="Artist"
+            formControlName="newArtist"
+            type="text"
+            class="input-field"
+          />
+          <br>
+         <label>Genre: </label>
+          <input
+            placeholder="Genre"
+            formControlName="newGenre"
+            type="text"
+            class="input-field"
+            />
+            <br>
+          <label>Record Company: </label>
+           <input
+            placeholder="recordCompany"
+            formControlName="newRecordCompany"
+            type="text"
+            class="input-field"
+            />
+            <br>
+          <label>Description: </label>
+           <input
+            placeholder="description"
+            formControlName="newDescription"
+            type="text"
+            class="input-field"
+            />
+            <br>
+         <label>Duration: </label> 
+          <input
+            placeholder="Duration"
+            formControlName="newDuration"
+            type="text"
+            class="input-field"
+            />
+            <br>
+         <label>Year: </label> 
+          <input
+            placeholder="Year"
+            formControlName="newYear"
+            type="text"
+            class="input-field"
+            />
+            <br>
+         <label>Album: </label> 
+          <input
+            placeholder="Album"
+            formControlName="newAlbum"
+            type="text"
+            class="input-field"
+            />
+            <br>
+         <label>File: </label> 
+          <input
+            placeholder="File"
+            formControlName="newFile"
+            type="text"
+            class="input-field"
+            />
+            <br>
+          <label>mp3: </label> 
+           <input
+            placeholder="mp3"
+            formControlName="newMp3"
+            type="text"
+            class="input-field"
+            />
+            <br>
+          <button (click)="onSubmit()">
+            Add
+          </button>
+        </form>
+      </div>
     </div>
-
   </div>
 <footer class="footer fixed-bottom">
   <app-reproductor *ngIf="cancionSelecc" [cancion]="cancionSelecc"></app-reproductor>
