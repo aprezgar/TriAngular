@@ -86,10 +86,6 @@ export class AppComponent {
     else if (this.cancionNueva == false)
     this.cancionNueva = true;
   } 
-  
-
-  editSong(cancionEditada: Cancion){
-  } 
 
 
   onSubmit() {

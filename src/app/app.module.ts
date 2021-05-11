@@ -34,7 +34,6 @@ import { TestdbComponent } from './testdb/testdb.component';
     ReproductorComponent,
     PlaySongComponent,
     TestdbComponent,
-    UploadFileComponent
   ],
   imports: [
     BrowserModule,
