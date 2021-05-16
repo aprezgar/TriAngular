@@ -3,7 +3,7 @@
   <h1 class="text-center">{{cancion!.title}}</h1>
   <h3 class="text-center">{{cancion!.artist}}</h3>
     <div class="box img">
-      <img id="photo-album" src="assets/cancion/{{cancion!.file}}" alt="photo_album"  *ngIf="cancion!.file.length">
+      <img id="photo-album" src="{{cancion!.file}}" alt="photo_album"  *ngIf="cancion!.file.length">
     </div>
     <div class="table" class= "box img">
       <table mat-table [dataSource]="[cancion]" class="mat-elevation-z8">

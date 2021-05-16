@@ -40,7 +40,7 @@
       <h3>Add new song</h3>
       <div *ngIf="cancionNueva" class="container-fluid">
         <form [formGroup]="this.form">
-         <label>Title: </label> 
+         <label>Title: </label>
           <input
             placeholder="Title"
             formControlName="newTitle"
@@ -48,7 +48,7 @@
             class="input-field"
             />
             <br>
-         <label>Artist: </label> 
+         <label>Artist: </label>
           <input
             placeholder="Artist"
             formControlName="newArtist"
@@ -80,7 +80,7 @@
             class="input-field"
             />
             <br>
-         <label>Duration: </label> 
+         <label>Duration: </label>
           <input
             placeholder="Duration"
             formControlName="newDuration"
@@ -88,7 +88,7 @@
             class="input-field"
             />
             <br>
-         <label>Year: </label> 
+         <label>Year: </label>
           <input
             placeholder="Year"
             formControlName="newYear"
@@ -96,7 +96,7 @@
             class="input-field"
             />
             <br>
-         <label>Album: </label> 
+         <label>Album: </label>
           <input
             placeholder="Album"
             formControlName="newAlbum"
@@ -104,7 +104,11 @@
             class="input-field"
             />
             <br>
-         <label>File: </label> 
+            <!--div class=form-group>
+              <h5>Seleccionar imagen </h5>
+              <input type="file" accept=".png, .jpg" (change)="OnUpload($event)">
+            </div-->
+         <label>Seleccionar imagen: </label>
           <input
             placeholder="File"
             formControlName="newFile"
@@ -112,7 +116,7 @@
             class="input-field"
             />
             <br>
-          <label>mp3: </label> 
+          <label>mp3: </label>
            <input
             placeholder="mp3"
             formControlName="newMp3"

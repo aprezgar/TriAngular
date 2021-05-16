@@ -9,6 +9,8 @@ import { Observable } from 'rxjs';
 import { FormGroup, FormControl } from '@angular/forms';
 import 'rxjs/add/operator/map';
 import { isNgTemplate } from '@angular/compiler';
+import { AngularFireStorage } from '@angular/fire/storage';
+
 
 
 
@@ -24,7 +26,7 @@ export class AppComponent {
   private listaCanciones!: AngularFirestoreCollection<Cancion>;
   canciones: Observable<Cancion[]>;
 
-  
+
   constructor(public firestore: AngularFirestore) {
     //this.canciones = firestore.collection('canciones').valueChanges();
 
@@ -32,12 +34,13 @@ export class AppComponent {
 
     this.canciones = this.listaCanciones.snapshotChanges().map((changes: any[]) => {
       return changes.map(a =>{
-        const data = a.payload.doc.data() as Cancion; 
+        const data = a.payload.doc.data() as Cancion;
         data.id = a.payload.doc.id;
         return data;
       });
     });
   }
+
   form = new FormGroup({
     newTitle: new FormControl(),
     newArtist: new FormControl(),
@@ -85,8 +88,13 @@ export class AppComponent {
     }
     else if (this.cancionNueva == false)
     this.cancionNueva = true;
-  } 
+  }
 
+  OnUpload(f:any){
+    console.log('subir',f);
+
+
+  }
 
   onSubmit() {
     this.listaCanciones.add({

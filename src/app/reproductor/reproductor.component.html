@@ -2,7 +2,9 @@
   <div class="grid-container p-3">
     <div class="row">
       <div class="col-md-3">
-        <img src="../../assets/{{cancion!.file}}" id="photo_album" class="rounded float-left mr-3" alt="photo_album" width="40px" height="40px" *ngIf="cancion!.file">
+        <!--img src="../../assets/{{cancion!.file}}" id="photo_album" class="rounded float-left mr-3" alt="photo_album" width="40px" height="40px" *ngIf="cancion!.file"-->
+        <img src="{{cancion!.file}}" id="photo_album" class="rounded float-left mr-3" alt="photo_album" width="40px" height="40px" *ngIf="cancion!.file">
+
         <span id="title" class="footer-title d-block text-truncate mb-0"><strong>{{cancion!.title}}</strong></span>
         <span id="artist" class="footer-artist d-block text-muted text-truncate mb-0"><small>{{cancion!.artist}}</small></span>
       </div>

@@ -29,9 +29,9 @@ table {
     }
 }
 *[role=columnheader] {
-  font-size: 20px;
+  font-size: 16px;
   }
   *[role=gridcell] {
-    font-size: 20px;
+    font-size: 17px;
     }
 
