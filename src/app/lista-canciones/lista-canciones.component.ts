@@ -1,6 +1,9 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
-import { Cancion } from '../cancion';
-import { CANCIONES } from './canciones';
+import { Cancion } from '../cancion/cancion';
+import { CANCIONES } from '../cancion/canciones';
+import { Artist } from '../filtros-canciones/artist';
+import { Filtro } from '../filtros-canciones/filtro';
+import { Genre } from '../filtros-canciones/genre';
 
 @Component({
   selector: 'app-lista-canciones',
@@ -9,10 +12,17 @@ import { CANCIONES } from './canciones';
 })
 export class ListaCancionesComponent implements OnInit {
 
-  canciones = CANCIONES;
-  textoFiltrado = "";
+  canciones = CANCIONES; 
+  @Input() textoBusqueda: string = "";
+  @Input() filtroArtista: Artist | null = null; 
+  @Input() filtroGenre: Genre | null = null; 
+  @Input() filtroNo: Filtro | null = null;
+
+  
 
   @Output() cancionSeleccionada = new EventEmitter<Cancion>();
+
+
 
   constructor() { }
 
@@ -22,6 +32,7 @@ export class ListaCancionesComponent implements OnInit {
   selecc(seleccionada:Cancion){
     this.cancionSeleccionada.emit(seleccionada);
   }
+
 
 }
 

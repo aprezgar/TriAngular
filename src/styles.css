@@ -9,9 +9,9 @@ head, body{
 }
 
 .bg-info{
-  margin-bottom: 25px ;
+  margin-bottom: 25px ; 
   background-color: black!important;
-  padding-bottom: 25px;
+  padding-bottom: 25px; 
   padding-top: 25px;
 }
 
@@ -23,27 +23,12 @@ head, body{
   margin-bottom: 25px;
 }
 
-/*
-  button, input{
-  border-radius: 30px;
-  border-width: 1px;
-  line-height:0.5;
-  font-size:20px;
-  padding-left:40px;
-  background-image:url(assets/icons/lupa.png);
-  background-size:18px;
-  background-repeat: no-repeat;
-  background-position-x: 5%;
-  background-position-y: 4.5px;
-}
-*/
-
 button, ::placeholder{
   font-size:20px;
 }
 
 .text-right{
-  margin-right: 50px;
+  margin-right: 50pxd; 
 }
 
 
@@ -54,3 +39,6 @@ button, ::placeholder{
 
 
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

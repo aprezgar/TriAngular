@@ -1,13 +1,11 @@
 <body>
-<div class="container-fluid">
+ <div class="container-fluid" style="margin-bottom:150px">
   <h1 class="text-center">{{cancion!.title}}</h1>
   <h3 class="text-center">{{cancion!.artist}}</h3>
-  <div class="text-center"><img id="photo-album" src="../../assets/img/{{cancion!.file}}" alt="photo_album" height="400px"
-                                width="400px" alt="" *ngIf="cancion!.file.length"></div>
-  <div id="album" class="text-center"> Album: {{cancion!.album}}</div>
-  <div id="record-company" class="text-center"> Record Company: {{cancion!.recordCompany}}</div>
-  <div id="genre" class="text-center"> Genre: {{cancion!.genre}}</div>
-  <div id="year" class="text-center">Year: {{cancion!.year}}</div>
-</div>
+    <div class="text-center"><img id="photo-album" src="assets/cancion/{{cancion!.file}}" alt="photo_album" height="400px" width="400px" alt="" *ngIf="cancion!.file.length"></div>
+    <div id="album" class="text-center"> Album: {{cancion!.album}}</div>
+    <div id="record-company" class="text-center"> Record Company: {{cancion!.recordCompany}}</div>
+    <div id="genre" class="text-center"> Genre: {{cancion!.genre}}</div>
+    <div id="year" class="text-center">Year: {{cancion!.year}}</div>
+  </div>
 </body>
-

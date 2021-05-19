@@ -1,0 +1,6 @@
+<ul class="text-left">
+    <li style="margin:5px" *ngFor="let filtro of filtros" (click)="seleccionFiltro(filtro)">
+    <span role="button">{{filtro.tipo}}</span>
+    </li>
+</ul>
+

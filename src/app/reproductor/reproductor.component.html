@@ -1,49 +1,44 @@
 <div class="footer">
   <div class="grid-container p-3">
-    <div>
-      <img src="../../assets/{{cancion!.file}}" id="photo_album" class="rounded float-left mr-3" alt="photo_album"
-           width="40px"
-           height="40px" *ngIf="cancion!.file">
-      <span id="title" class="footer-title d-block text-truncate mb-0"><strong>{{cancion!.title}}</strong></span>
-      <span id="artist"
-            class="footer-artist d-block text-muted text-truncate mb-0"><small>{{cancion!.artist}}</small></span>
-    </div>
-    <div align="center">
-      <!--
-      <button id="rewind-button"><img src="assets/icons/rewind.ico" class="ico"></button>
-      <button id="play-button"><img src="assets/icons/play.ico" class="ico"></button>
-      <button id="forward-button"><img src="assets/icons/forward.ico" class="ico"></button>
-    -->
-      <div class="media-action-bar">
-        <button>
-          <!-- mat-button [disabled]="isFirstPlaying()" (click)="previous()" -->
-          <img src="assets/icons/rewind.ico" class="ico">
-        </button>
-        <button>
-          <!--mat-button (click)="play()" [disabled]="state?.error" *ngIf="!state?.playing" -->
-          <img src="assets/icons/play.ico" class="ico">
-        </button>
-        <button>
-          <!-- mat-button (click)="pause()" *ngIf="state?.playing" -->
-          <img src="assets/icons/pause.ico" class="ico">
-        </button>
-        <button>
-          <!-- mat-button [disabled]="isLastPlaying()" (click)="next()" -->
-          <img src="assets/icons/forward.ico" class="ico">
-        </button>
+    <div class="row">
+      <div class="col-md-3">
+        <img src="../../assets/{{cancion!.file}}" id="photo_album" class="rounded float-left mr-3" alt="photo_album" width="40px" height="40px" *ngIf="cancion!.file">
+        <span id="title" class="footer-title d-block text-truncate mb-0"><strong>{{cancion!.title}}</strong></span>
+        <span id="artist" class="footer-artist d-block text-muted text-truncate mb-0"><small>{{cancion!.artist}}</small></span>
       </div>
-
-      <div class="progress mt-2">
-        <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
-             aria-valuemax="100">
-          {{ state?.readableCurrentTime }}
+      <div class="col-md-2">
+        <!-- mat-button [disabled]="isFirstPlaying()" (click)="previous()" -->
+        <!--<img role="button" src="assets/icons/rewind.ico" class="ico" widht="40px">-->
+        <!--mat-button (click)="play()" [disabled]="state?.error" *ngIf="!state?.playing" -->
+        <img role="button" *ngIf="stop"src="assets/icons/play.ico" width="50px" height="50px" (click)="onPlay()">
+        <img role="button" *ngIf="!stop" src="assets/icons/pause.png" width="50px" height="50px" (click)="onPause()">
+        <img role="button" src="assets/icons/stop.png" width="50px" height="50px" (click)="onStop()">
+        <!-- mat-button [disabled]="isLastPlaying()" (click)="next()" -->
+        <!--<img role="button" src="assets/icons/forward.ico" class="ico">-->
+      </div>
+      <div class="col-md-7">
+        <div class="reproductor">
+          <div class="timePlayed">
+            <input (focus)="onPause()" type="text" placeholder="{{valuePlayedTime}}" name="timePlayed" [(ngModel)]="valuePlayedTime" value="{{toHumanTime(audio.currentTime)}}" (keyup)="changeCurrentTime()">
+          </div>
+          <!-- -->
+          <app-play-song class= "trackLenght" (refreshTimePlayed)="refreshTimePlayed($event)" [valuePlayedTime]="toPercent(toHumanTime(audio.currentTime))" [cancion]="cancion" [audio]="audio"></app-play-song>
+          <div class="cancionDuration">{{cancion!.duration}}</div>
         </div>
       </div>
-    </div>
-    <div class="d-flex justify-content-between">
-      <div>00:00</div>
-      <div>02:13</div>
+      <!--div class="col-md-7">
+        <div class="progress mt-2">
+          <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div>00:00</div>
+          <div>02:13</div>
+        </div>
+      </div-->
     </div>
   </div>
 </div>
+
+
 
