@@ -6,10 +6,12 @@ import { Filtro } from './filtros-canciones/filtro';
 import { Genre } from './filtros-canciones/genre';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormBuilder,
+  FormControl, Validators } from '@angular/forms';
 import 'rxjs/add/operator/map';
 import { isNgTemplate } from '@angular/compiler';
 import { AngularFireStorage } from '@angular/fire/storage';
+import { FirebaseStorageService } from './firebase-storage.service';
 
 
 
@@ -18,7 +20,9 @@ import { AngularFireStorage } from '@angular/fire/storage';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  template: `
+    <button class="green-button">Button</button>`
 
 })
 export class AppComponent {
@@ -27,7 +31,7 @@ export class AppComponent {
   canciones: Observable<Cancion[]>;
 
 
-  constructor(public firestore: AngularFirestore) {
+  constructor(public firestore: AngularFirestore,private firebaseStorage: FirebaseStorageService) {
     //this.canciones = firestore.collection('canciones').valueChanges();
 
     this.listaCanciones = this.firestore.collection('canciones');
@@ -41,8 +45,8 @@ export class AppComponent {
     });
   }
 
-  form = new FormGroup({
-    newTitle: new FormControl(),
+    form = new FormGroup({
+    newTitle: new FormControl('',Validators.required),
     newArtist: new FormControl(),
     newGenre: new FormControl(),
     newYear: new FormControl(),
@@ -53,6 +57,15 @@ export class AppComponent {
     newDescription: new FormControl(),
     newDuration: new FormControl()
   })
+
+  saveData(){
+    if (this.form.valid) {
+    console.log(this.form.value);
+  } else {
+    alert("FILL ALL FIELDS");
+  }
+  }
+
   title: string = "MusicWeb";
   textoFiltrado: string = "";
   //canciones = CANCIONES;
@@ -66,6 +79,7 @@ export class AppComponent {
   selecc(seleccionada:Cancion){
     this.cancionSelecc = seleccionada;
   }
+
 
   seleccionFiltro(seleccion:Filtro){
     this.filtroSelecc = seleccion;
@@ -96,6 +110,7 @@ export class AppComponent {
 
   }
 
+
   onSubmit() {
     this.listaCanciones.add({
         id: 0,
@@ -118,9 +133,54 @@ export class AppComponent {
         console.log(e);
     })
 }
+
+public archivoForm = new FormGroup({
+  archivo: new FormControl(null, Validators.required),
+});
+
+public mensajeArchivo = 'No hay un archivo seleccionado';
+public datosFormulario = new FormData();
+public nombreArchivo = '';
+public URLPublica = '';
+public porcentaje = 0;
+public finalizado = false;
+
+
+
+
+public cambioArchivo(event:any) {
+  if (event.target.files.length > 0) {
+    for (let i = 0; i < event.target.files.length; i++) {
+      this.mensajeArchivo = `Archivo preparado: ${event.target.files[i].name}`;
+      this.nombreArchivo = event.target.files[i].name;
+      this.datosFormulario.delete('archivo');
+      this.datosFormulario.append('archivo', event.target.files[i], event.target.files[i].name)
+    }
+  } else {
+    this.mensajeArchivo = 'No hay un archivo seleccionado';
+  }
 }
 
+//Sube el archivo a Cloud Storage
+public subirArchivo() {
+  let archivo = this.datosFormulario.get('archivo');
+  let referencia = this.firebaseStorage.referenciaCloudStorage(this.nombreArchivo);
+  let tarea = this.firebaseStorage.tareaCloudStorage(this.nombreArchivo, archivo);
 
+  //Cambia el porcentaje
+
+  tarea.percentageChanges().subscribe((porcentaje:any) => {
+    this.porcentaje = Math.round (porcentaje);
+    if (this.porcentaje == 100) {
+      this.finalizado = true;
+    }
+  });
+
+  referencia.getDownloadURL().subscribe((URL) => {
+    this.URLPublica = URL;
+  });
+}
+}
 
 function AngularFireObject<T>() {
   throw new Error('Function not implemented.');

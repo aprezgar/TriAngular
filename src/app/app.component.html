@@ -27,50 +27,45 @@
       <app-detalle-filtro *ngIf="filtroSelecc" [filtro]="filtroSelecc" (artistSeleccionado)="seleccionArtist($event)" (genreSeleccionado)="seleccionGenre($event)"></app-detalle-filtro>
     </div>
     <div class="col-md-4">
-      <h3 class="text-left" style="margin-left:20px; margin-bottom:25px;"><mat-icon id="allSongs" style="margin-right:30px; margin-bottom:7px;">queue_music</mat-icon>       Tracks
-        <mat-icon role="button" id="addSong" style="float: right;" *ngIf="!cancionNueva" (click)="addSong()">add_circle_outline</mat-icon>
-        <mat-icon role="button" id="noNewSongs" style="float: right;" *ngIf="cancionNueva" (click)="addSong()">remove_circle_outline</mat-icon>
+      <h3 class="text-left" style="margin-left:20px; margin-bottom:25px; "><mat-icon id="allSongs" style="margin-right:30px; margin-bottom:7px;">queue_music</mat-icon>Tracks
+
       </h3>
       <app-lista-canciones (cancionSeleccionada)="selecc($event)" [textoBusqueda]="textoFiltrado" [filtroArtista]="artistSelecc" [filtroGenre]="genreSelecc" [filtroNo]="filtroSelecc"></app-lista-canciones>
     </div>
     <div class="col-md-5">
-      <app-canciones *ngIf="cancionSelecc" [cancion]="cancionSelecc">
-        <mat-icon>edit</mat-icon>
-      </app-canciones>
-      <h3>Add new song</h3>
+      <div><h3><mat-icon role="button" id="addSong" style="float: left; margin-right:30px;" *ngIf="!cancionNueva" (click)="addSong()">add_circle_outline</mat-icon>
+        <mat-icon role="button" id="noNewSongs" style="float: letf; margin-right:30px;" *ngIf="cancionNueva" (click)="addSong()">remove_circle_outline</mat-icon>Add new song</h3></div>
       <div *ngIf="cancionNueva" class="container-fluid">
-        <form [formGroup]="this.form">
-         <label>Title: </label>
+        <form [formGroup]="this.form" (ngSubmit)="saveData()" novalidate>
+          <div>
+          <label>Title*:</label>
           <input
             placeholder="Title"
-            formControlName="newTitle"
+            formControlName="newTitle" required
             type="text"
-            class="input-field"
-            />
-            <br>
+            class="input-field"/>
+          </div>
+          <div *ngIf= "form.controls['newTitle'].errors?.required"><strong>*Field is required</strong></div>
          <label>Artist: </label>
           <input
             placeholder="Artist"
             formControlName="newArtist"
             type="text"
-            class="input-field"
-          />
+            class="input-field"/>
           <br>
          <label>Genre: </label>
           <input
             placeholder="Genre"
             formControlName="newGenre"
             type="text"
-            class="input-field"
-            />
+            class="input-field"/>
             <br>
           <label>Record Company: </label>
            <input
             placeholder="recordCompany"
             formControlName="newRecordCompany"
             type="text"
-            class="input-field"
-            />
+            class="input-field"/>
             <br>
           <label>Description: </label>
            <input
@@ -104,11 +99,32 @@
             class="input-field"
             />
             <br>
-            <!--div class=form-group>
-              <h5>Seleccionar imagen </h5>
-              <input type="file" accept=".png, .jpg" (change)="OnUpload($event)">
-            </div-->
-         <label>Seleccionar imagen: </label>
+            <div class="contenedor">
+              <div class="contenedor_formulario">
+                <h1 class="is-size-1">Subir archivo (jpg, png, mp3)</h1>
+                <p class="download" *ngIf="finalizado">URL de descarga: <a href="{{ URLPublica }}" target="_blank">Descargar</a></p>
+                <form [formGroup]="archivoForm" (ngSubmit)="subirArchivo()">
+                  <div class="file has-name is-boxed">
+                    <label class="file-label">
+                      <input class="file-input" type="file" formControlName="archivo" (change)="cambioArchivo($event)">
+                      <span class="file-cta">
+                        <span class="file-label">
+                          Elegir un archivo…
+                        </span>
+                      </span>
+                      <span class="file-name">
+                        {{ mensajeArchivo }}
+                      </span>
+                    </label>
+                  </div>
+                  <hr>
+                  <progress *ngIf="porcentaje > 0 && porcentaje < 100" class="progress is-large is-success" value="{{porcentaje}}" max="100">{{porcentaje}}%</progress>
+                  <button [ngClass]="{'button': true, 'is-success': true, 'is-large': true, 'is-loading': porcentaje > 0 && porcentaje < 100}" [disabled]="!archivoForm.valid && (porcentaje > 0 && porcentaje < 100)" class="green-button" >Subir archivo</button>
+                </form>
+              </div>
+            </div>
+            <br>
+         <label>insertar URL de la imagen: </label>
           <input
             placeholder="File"
             formControlName="newFile"
@@ -116,7 +132,7 @@
             class="input-field"
             />
             <br>
-          <label>mp3: </label>
+          <label>insertar URL del mp3: </label>
            <input
             placeholder="mp3"
             formControlName="newMp3"
@@ -124,11 +140,14 @@
             class="input-field"
             />
             <br>
-          <button (click)="onSubmit()">
+          <button _ngcontent-bvo-c125 (click)= "onSubmit()" [disabled]= "form.invalid" class="green-button">
             Add
           </button>
         </form>
       </div>
+      <br>
+            <app-canciones *ngIf="cancionSelecc" [cancion]="cancionSelecc">
+      </app-canciones>
     </div>
   </div>
 <footer class="footer fixed-bottom">

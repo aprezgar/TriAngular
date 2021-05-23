@@ -21,6 +21,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { TestdbComponent } from './testdb/testdb.component';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,9 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
     AngularFirestoreModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    MatButtonModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
