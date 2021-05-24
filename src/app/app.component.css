@@ -48,6 +48,7 @@ head, body{
     border-radius: 4px;
     box-sizing: border-box;
     resize: vertical;
+    margin-top: 2%;
 }
 
 input::placeholder{
@@ -151,3 +152,13 @@ h6{
   font-family: 'Montserrat', sans-serif;
 }
 
+
+::ng-deep .is-size-1 {
+    font-size: 16px!important;
+    font-weight: 700;
+    margin: 2% 0 1% 1%;
+}
+
+strong{
+    margin: 2% 0 2% 9%;
+}
