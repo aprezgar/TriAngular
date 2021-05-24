@@ -101,26 +101,26 @@
             <br>
             <div class="contenedor">
               <div class="contenedor_formulario">
-                <h1 class="is-size-1">Subir canción y carátula de la canción (jpg, png, mp3)</h1>
-                <p class="download" *ngIf="finalizado">URL de descarga: <a href="{{ URLPublica }}" target="_blank">Descargar</a></p>
+                <h1 class="is-size-1">Upload song and album cover (jpg, png, mp3)</h1>
+                <p class="download" *ngIf="finalizado">URL to download: <a href="{{ URLPublica }}" target="_blank">Descargar</a></p>
                 <form [formGroup]="archivoForm" (ngSubmit)="subirArchivo()">
                   <div class="file has-name is-boxed">
-                    <label class="file-label">
+                    <label class="file-label">1. Select file:
                       <input class="file-input" type="file" formControlName="archivo" (change)="cambioArchivo($event)">
-                      <!--<span class="file-name">
+                      <span class="file-name">
                         {{ mensajeArchivo }}
-                      </span>!-->
+                      </span>
                     </label>
                   </div>
                   <progress *ngIf="porcentaje > 0 && porcentaje < 100" class="progress is-large is-success" value="{{porcentaje}}" max="100">{{porcentaje}}%</progress>
-                  <button [ngClass]="{'button': true, 'is-success': true, 'is-large': true, 'is-loading': porcentaje > 0 && porcentaje < 100}" [disabled]="!archivoForm.valid && (porcentaje > 0 && porcentaje < 100)" class="green-button" >Subir archivo</button>
+                  <button [ngClass]="{'button': true, 'is-success': true, 'is-large': true, 'is-loading': porcentaje > 0 && porcentaje < 100}" [disabled]="!archivoForm.valid && (porcentaje > 0 && porcentaje < 100)" class="green-button" >2. Upload File</button>
                 </form>
               </div>
             </div>
             <hr>
-            <h1 class="is-size-1">Una vez se han subido la canción y su carátula, indicar las URL de descarga:</h1>
+            <h1 class="is-size-1">Once song and cover are uploaded, please insert both ULRs below:</h1>
             <br>
-         <label>URL de la imagen: </label>
+         <label>Cover URL: </label>
 
           <input
             placeholder="File"
@@ -129,7 +129,7 @@
             class="input-field"
             />
             <br>
-          <label>URL del mp3: </label>
+          <label>mp3 URL: </label>
            <input
             placeholder="mp3"
             formControlName="newMp3"
@@ -138,7 +138,7 @@
             />
             <br>
           <button _ngcontent-bvo-c125 (click)= "onSubmit()" [disabled]= "form.invalid" class="green-button">
-            Add
+            Add song
           </button>
         </form>
       </div>

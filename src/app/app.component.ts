@@ -138,7 +138,7 @@ public archivoForm = new FormGroup({
   archivo: new FormControl(null, Validators.required),
 });
 
-//public mensajeArchivo = 'No hay un archivo seleccionado';
+public mensajeArchivo = 'No file selected';
 public datosFormulario = new FormData();
 public nombreArchivo = '';
 public URLPublica = '';
@@ -151,14 +151,14 @@ public finalizado = false;
 public cambioArchivo(event:any) {
   if (event.target.files.length > 0) {
     for (let i = 0; i < event.target.files.length; i++) {
-      //this.mensajeArchivo = `Archivo preparado: ${event.target.files[i].name}`;
+      this.mensajeArchivo = `File uploaded: ${event.target.files[i].name}`;
       this.nombreArchivo = event.target.files[i].name;
       this.datosFormulario.delete('archivo');
       this.datosFormulario.append('archivo', event.target.files[i], event.target.files[i].name)
     }
-  } /*else {
-    this.mensajeArchivo = 'No hay un archivo seleccionado';
-  }*/
+  } else {
+    this.mensajeArchivo = 'No file selected';
+  }
 }
 
 //Sube el archivo a Cloud Storage
