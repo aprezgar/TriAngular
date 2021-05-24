@@ -51,8 +51,8 @@ export class AppComponent {
     newGenre: new FormControl(),
     newYear: new FormControl(),
     newAlbum: new FormControl(),
-    newMp3: new FormControl(),
-    newFile: new FormControl(),
+    newMp3: new FormControl('',Validators.required),
+    newFile: new FormControl('',Validators.required),
     newRecordCompany: new FormControl(),
     newDescription: new FormControl(),
     newDuration: new FormControl()
@@ -115,7 +115,7 @@ export class AppComponent {
     this.listaCanciones.add({
         id: 0,
         description:this.form.value.newDescription,
-        title: this.form.value.newTitle, 
+        title: this.form.value.newTitle,
         artist: this.form.value.newArtist,
         recordCompany: this.form.value.newRecordCompany,
         genre: this.form.value.newGenre,

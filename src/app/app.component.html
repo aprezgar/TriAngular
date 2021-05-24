@@ -102,7 +102,7 @@
             <div class="contenedor">
               <div class="contenedor_formulario">
                 <h1 class="is-size-1">Upload song and album cover (jpg, png, mp3)</h1>
-                <p class="download" *ngIf="finalizado">URL to download: <a href="{{ URLPublica }}" target="_blank">Descargar</a></p>
+                <p class="download" *ngIf="finalizado">URL to download: <a href="{{ URLPublica }}" target="_blank">Copy URL</a></p>
                 <form [formGroup]="archivoForm" (ngSubmit)="subirArchivo()">
                   <div class="file has-name is-boxed">
                     <label class="file-label">1. Select file:
@@ -112,30 +112,36 @@
                       </span>
                     </label>
                   </div>
+                  <br>
                   <progress *ngIf="porcentaje > 0 && porcentaje < 100" class="progress is-large is-success" value="{{porcentaje}}" max="100">{{porcentaje}}%</progress>
                   <button [ngClass]="{'button': true, 'is-success': true, 'is-large': true, 'is-loading': porcentaje > 0 && porcentaje < 100}" [disabled]="!archivoForm.valid && (porcentaje > 0 && porcentaje < 100)" class="green-button" >2. Upload File</button>
                 </form>
               </div>
             </div>
             <hr>
-            <h1 class="is-size-1">Once song and cover are uploaded, please insert both ULRs below:</h1>
+            <h1 class="is-size-1">Once cover file is uploaded, please insert ULR below:</h1>
             <br>
-         <label>Cover URL: </label>
-
+            <div>
+         <label>Cover URL*: </label>
           <input
             placeholder="File"
             formControlName="newFile"
             type="text"
             class="input-field"
             />
-            <br>
-          <label>mp3 URL: </label>
+          </div>
+          <div *ngIf= "this.form.controls['newFile'].errors?.required"><strong>*This field is required</strong></div>
+            <hr>
+            <h1 class="is-size-1">Once mp3 file is uploaded, please insert ULR below:</h1>
+            <div>
+          <label>mp3 URL*: </label>
            <input
             placeholder="mp3"
             formControlName="newMp3"
             type="text"
-            class="input-field"
-            />
+            class="input-field"/>
+            </div>
+            <div *ngIf= "this.form.controls['newMp3'].errors?.required"><strong>*This field is required</strong></div>
             <br>
           <button _ngcontent-bvo-c125 (click)= "onSubmit()" [disabled]= "form.invalid" class="green-button">
             Add song
