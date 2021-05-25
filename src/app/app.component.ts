@@ -47,8 +47,8 @@ export class AppComponent {
 
     form = new FormGroup({
     newTitle: new FormControl('',Validators.required),
-    newArtist: new FormControl(),
-    newGenre: new FormControl(),
+    newArtist: new FormControl('',Validators.required),
+    newGenre: new FormControl('',Validators.required),
     newYear: new FormControl(),
     newAlbum: new FormControl(),
     newMp3: new FormControl('',Validators.required),

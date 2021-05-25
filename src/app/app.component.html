@@ -46,20 +46,25 @@
             class="input-field"/>
           </div>
           <div *ngIf= "this.form.controls['newTitle'].errors?.required"><strong>*This field is required</strong></div>
-         <label>Artist: </label>
+          <div>
+          <label>Artist*: </label>
           <input
             placeholder="Artist"
             formControlName="newArtist"
             type="text"
             class="input-field"/>
-          <br>
-         <label>Genre: </label>
+         </div>
+         <div *ngIf= "this.form.controls['newArtist'].errors?.required"><strong>*This field is required</strong></div>
+        <div>
+         <label>Genre*: </label>
           <input
             placeholder="Genre"
             formControlName="newGenre"
             type="text"
             class="input-field"/>
-            <br>
+          </div>
+            <div *ngIf= "this.form.controls['newGenre'].errors?.required"><strong>*This field is required</strong></div>
+
           <label>Record Company: </label>
            <input
             placeholder="recordCompany"
@@ -101,8 +106,9 @@
             <br>
             <div class="contenedor">
               <div class="contenedor_formulario">
-                <h1 class="is-size-1">Upload song and album cover (jpg, png, mp3)</h1>
-                <p class="download" *ngIf="finalizado">URL to download: <a href="{{ URLPublica }}" target="_blank">Copy URL</a></p>
+              <h1 class="is-size-1">Upload song and album cover (jpg, png, mp3)</h1>
+              <br>
+                <p class="download" *ngIf="finalizado"> URL to download: <a href="{{ URLPublica }}" target="_blank">Copy URL</a></p>
                 <form [formGroup]="archivoForm" (ngSubmit)="subirArchivo()">
                   <div class="file has-name is-boxed">
                     <label class="file-label">1. Select file:
@@ -120,7 +126,6 @@
             </div>
             <hr>
             <h1 class="is-size-1">Once cover file is uploaded, please insert ULR below:</h1>
-            <br>
             <div>
          <label>Cover URL*: </label>
           <input
