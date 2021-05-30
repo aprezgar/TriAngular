@@ -23,7 +23,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 # MusicWeb
 
-Bienvendidos a nuestra aplicación **MusicWeb**!, un reproductor de tus canciones favoritas con almacenamiento en la nuve con el que podrás escuchar tus canciones favoritas siempre que quieras.
+Bienvendidos a nuestra aplicación **MusicWeb**, un reproductor de tus canciones favoritas con almacenamiento en la nuve con el que podrás escuchar tus canciones favoritas siempre que quieras.
 
 
 
@@ -65,7 +65,6 @@ https://youtu.be/HDRA14i6_Eo
 
 
 
-```
 
 ## Despliegue 📦
 
