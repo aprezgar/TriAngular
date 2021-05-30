@@ -24,6 +24,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # MusicWeb
 
 Bienvendidos a nuestra aplicación **MusicWeb**, un reproductor de tus canciones favoritas con almacenamiento en la nuve con el que podrás escuchar tus canciones favoritas siempre que quieras.
+![mw_NEGRO](https://user-images.githubusercontent.com/63413295/120095170-c3080c00-c124-11eb-974e-de590308c3a1.png)
 
 
 
