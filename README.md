@@ -1,6 +1,6 @@
 # MusicWeb
 
-Bienvendidos a nuestra aplicación MusicWeb, un reproductor de tus canciones favoritas con almacenamiento en la nuve con el que podrás escuchar tus canciones favoritas siempre que quieras. Este proyecto se ha generado con [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6. A continuación presentamos cómo puedes instalarlo en tu dispositivo y un tutorial en vídeo para que puedas disfrutarlo en su totalidad. 
+Bienvendidos a nuestra aplicación MusicWeb, un reproductor de tus canciones favoritas con almacenamiento en la nuve con el que podrás escuchar tus canciones favoritas siempre que quieras. 
 
 ## Development server
 
@@ -31,9 +31,7 @@ _Acá va un párrafo que describa lo que es el proyecto_
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
-Mira **Deployment** para conocer como desplegar el proyecto.
+Este proyecto se ha generado con [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6. A continuación presentamos cómo puedes instalarlo en tu dispositivo y un tutorial en vídeo para que puedas disfrutarlo en su totalidad. 
 
 
 ### Pre-requisitos 📋
@@ -63,7 +61,9 @@ hasta finalizar
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
 ## Ejecutando las pruebas ⚙️
+https://youtu.be/HDRA14i6_Eo
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/HDRA14i6_Eo/0.jpg)](https://www.youtube.com/watch?v=HDRA14i6_Eo)
 _Explica como ejecutar las pruebas automatizadas para este sistema_
 
 ### Analice las pruebas end-to-end 🔩
@@ -108,13 +108,11 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
+_En este proyecto h_
 
-* **Sandra Vázquez** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Ana Pérez** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-* **Lucian Ivanov** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
+* **Sandra Vázquez** - *Desarrolladora* - [svazquezcan](https://github.com/svazquezcan)
+* **Ana Pérez** - *Desarrolladora* - [aprezgar](https://github.com/aprezgar)
+* **Lucian Ivanov** - *Desarrollador* - [fulanitodetal](#fulanito-de-tal)
 
 ## Licencia 📄
 
