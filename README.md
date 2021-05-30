@@ -39,7 +39,7 @@ ng start
 ```
 ng serve
 ```
-Naviga a `http://localhost:4200/`. La aplicación se actualizará automáticamente cuando cambies cualquier componente de la aplicación.
+Navega a `http://localhost:4200/`. La aplicación se actualizará automáticamente cuando cambies cualquier componente de la aplicación.
 
 ## Vídeo Tutorial ⚙️
 https://youtu.be/HDRA14i6_Eo
