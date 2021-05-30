@@ -1,6 +1,6 @@
 # MusicWeb
 
-Bienvendidos a nuestra aplicación web This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
+Bienvendidos a nuestra aplicación MusicWeb, un reproductor de tus canciones favoritas con almacenamiento en la nuve con el que podrás escuchar tus canciones favoritas siempre que quieras. Este proyecto se ha generado con [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6. A continuación presentamos cómo puedes instalarlo en tu dispositivo y un tutorial en vídeo para que puedas disfrutarlo en su totalidad. 
 
 ## Development server
 
