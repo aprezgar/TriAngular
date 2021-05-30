@@ -60,11 +60,11 @@ hasta finalizar
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
-## Ejecutando las pruebas ⚙️
+## Vídeo Tutorial ⚙️
 https://youtu.be/HDRA14i6_Eo
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/HDRA14i6_Eo/0.jpg)](https://www.youtube.com/watch?v=HDRA14i6_Eo)
-_Explica como ejecutar las pruebas automatizadas para este sistema_
+
 
 ### Analice las pruebas end-to-end 🔩
 
@@ -108,24 +108,18 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 
 ## Autores ✒️
 
-_En este proyecto h_
+_Este proyecto ha sido posible gracias a: _
 
 * **Sandra Vázquez** - *Desarrolladora* - [svazquezcan](https://github.com/svazquezcan)
 * **Ana Pérez** - *Desarrolladora* - [aprezgar](https://github.com/aprezgar)
-* **Lucian Ivanov** - *Desarrollador* - [fulanitodetal](#fulanito-de-tal)
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+* **Lucian Ivanov** - *Desarrollador* - [livanovUOC](https://github.com/livanovUOC)
+* Y el apoyo de nuestro tutor **Paco Gómez** [https://github.com/pacogomezarnal](https://github.com/pacogomezarnal)
 
 ## Expresiones de Gratitud 🎁
 
 * Comenta a otros sobre este proyecto 📢
 * Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
 * Da las gracias públicamente 🤓.
-* etc.
-
-
 
 ---
 ⌨️ con ❤️ por ![Triangular (2) jpg](https://user-images.githubusercontent.com/63413295/120093660-04e08480-c11c-11eb-8f5e-14107c74e987.png)
