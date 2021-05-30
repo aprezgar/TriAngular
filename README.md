@@ -1,7 +1,3 @@
-# MusicWeb
-
-Bienvendidos a nuestra aplicación MusicWeb, un reproductor de tus canciones favoritas con almacenamiento en la nuve con el que podrás escuchar tus canciones favoritas siempre que quieras. 
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -29,7 +25,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Bienvendidos a nuestra aplicación **MusicWeb**!, un reproductor de tus canciones favoritas con almacenamiento en la nuve con el que podrás escuchar tus canciones favoritas siempre que quieras.
 
-[mw_NEGRO](https://user-images.githubusercontent.com/63413295/120094807-d31eec00-c122-11eb-9aad-fbb6522317fd.png)
+
 
 ## Comenzando 🚀
 
@@ -68,20 +64,7 @@ https://youtu.be/HDRA14i6_Eo
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/HDRA14i6_Eo/0.jpg)](https://www.youtube.com/watch?v=HDRA14i6_Eo)
 
 
-### Analice las pruebas end-to-end 🔩
 
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
 ```
 
 ## Despliegue 📦
@@ -95,14 +78,6 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
 * [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
-
-## Contribuyendo 🖇️
-
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
 
 ## Versionado 📌
 
