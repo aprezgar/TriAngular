@@ -20,11 +20,11 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# MusicWeb
+To get more help o![mw_NEGRO](https://user-images.githubusercontent.com/63413295/120095170-c3080c00-c124-11eb-974e-de590308c3a1.png)n the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# MusicWeb ![mw_NEGRO](https://user-images.githubusercontent.com/63413295/120095170-c3080c00-c124-11eb-974e-de590308c3a1.png)
 
 Bienvendidos a nuestra aplicación **MusicWeb**, un reproductor de tus canciones favoritas con almacenamiento en la nuve con el que podrás escuchar tus canciones favoritas siempre que quieras.
-![mw_NEGRO](https://user-images.githubusercontent.com/63413295/120095170-c3080c00-c124-11eb-974e-de590308c3a1.png)
+
 
 
 
