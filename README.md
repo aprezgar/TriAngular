@@ -1,6 +1,6 @@
 # MusicWeb 
 
-Bienvendidos a nuestra aplicación **MusicWeb**, un reproductor de tus canciones favoritas con almacenamiento en la nuve con el que podrás escuchar tus canciones favoritas siempre que quieras.
+Bienvendidos a nuestra aplicación **MusicWeb**, un reproductor de tus canciones favoritas con almacenamiento en la nuve con el que podrás escucharlas siempre que quieras.
 
 
 ## Comenzando 🚀
