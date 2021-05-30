@@ -25,9 +25,11 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# Título del Proyecto
+# MusicWeb
 
-_Acá va un párrafo que describa lo que es el proyecto_
+Bienvendidos a nuestra aplicación **MusicWeb**!, un reproductor de tus canciones favoritas con almacenamiento en la nuve con el que podrás escuchar tus canciones favoritas siempre que quieras.
+
+[mw_NEGRO](https://user-images.githubusercontent.com/63413295/120094807-d31eec00-c122-11eb-9aad-fbb6522317fd.png)
 
 ## Comenzando 🚀
 
