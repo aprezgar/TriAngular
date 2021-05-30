@@ -11,11 +11,15 @@ Este proyecto se ha generado con [Angular CLI](https://github.com/angular/angula
 ### Pre-requisitos 📋
 
 Antes de empezar la instalación de MusicWeb debes tener instalado:
+* NodeJs
 
 ```
-Da un ejemplo
+nodejs.org/es
 ```
-
+* npm install npm@latest -g
+```
+nodejs.org/es
+```
 ### Clonar repositorio 🔧
 
 * Clona el repsositorio:
@@ -49,9 +53,9 @@ https://youtu.be/HDRA14i6_Eo
 
 _Menciona las herramientas que utilizaste para crear tu proyecto_
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
+* [Angular CLI](https://github.com/angular/angular-cli) - El framework de Angular
+* [Firebase](https://rometools.github.io/rome/) - Usado para generar RSS
+* [Angular Material](https://material.angular.io/) - Componentes de diseño para Angular 
 
 ## Manuales de Ayuda 📌
 
