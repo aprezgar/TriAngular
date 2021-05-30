@@ -129,4 +129,5 @@ Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md
 
 
 ---
-⌨️ con ❤️ por ![Triangular (2)](https://user-images.githubusercontent.com/63413295/120093615-bc28cb80-c11b-11eb-88c1-d36a2a17c917.png)
+⌨️ con ❤️ por ![Triangular (2) jpg](https://user-images.githubusercontent.com/63413295/120093660-04e08480-c11c-11eb-8f5e-14107c74e987.png)
+
