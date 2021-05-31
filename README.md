@@ -54,7 +54,7 @@ https://youtu.be/HDRA14i6_Eo
 _Menciona las herramientas que utilizaste para crear tu proyecto_
 
 * [Angular CLI](https://github.com/angular/angular-cli) - El framework de Angular
-* [Firebase](https://rometools.github.io/rome/) - Usado para generar RSS
+* [Firebase](https://rometools.github.io/rome/) - Usado para generar la base de datos en la nuve.
 * [Angular Material](https://material.angular.io/) - Componentes de diseño para Angular 
 
 ## Manuales de Ayuda 📌
