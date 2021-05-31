@@ -12,7 +12,6 @@ Este proyecto se ha generado con [Angular CLI](https://github.com/angular/angula
 
 Antes de empezar la instalación de MusicWeb debes tener instalado:
 * NodeJs:
-
 ```
 nodejs.org/es
 ```
@@ -27,7 +26,6 @@ npm install npm@latest -g
 git clone https://github.com/aprezgar/TriAngular.git
 ```
 * Descarga dependencias:
-
 ```
 ng install
 ```
